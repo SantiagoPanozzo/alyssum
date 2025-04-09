@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-const ProfileCard = ({name, shortDescription, description, image}) => {
+const ProfileCard = ({name, shortDescription, description, image}: {name: string, shortDescription: string, description: string, image: string}) => {
   return (
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl max-w-4xl w-full p-8 transition-all duration-300 animate-fade-in">
         <div className="flex flex-col md:flex-row">
