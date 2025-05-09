@@ -57,10 +57,10 @@ return (
           <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-background z-10" />
           <div className="absolute inset-0">
             <Image
-              src="/placeholder.svg?height=800&width=1600"
+              src="/bg.jpg"
               alt="Event background"
               fill
-              className="object-cover"
+              className="object-cover opacity-30 absolute"
               priority
             />
           </div>
@@ -189,7 +189,7 @@ return (
           <section id="speakers" className="py-16 md:py-24 bg-muted/30">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Spreakers Invitados</h2>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Speakers Invitados</h2>
                 <div className="h-1 w-20 bg-primary my-6"></div>
                 <p className="text-xl text-muted-foreground max-w-[800px]">
                   Aprende de los más importantes profesionales de la industria.
@@ -198,35 +198,29 @@ return (
 
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
                 <SpeakerCard
-                    name="Alex Johnson"
-                    role="CTO, TechInnovate"
-                    image="/placeholder.svg?height=400&width=400"
-                    topic="AI in Enterprise"
+                    name="Santiago Fernandez"
+                    role="Un puesto, en una empresa"
+                    image="https://i.pravatar.cc/400"
+                    topic="Marketing"
                 />
                 <SpeakerCard
-                    name="Sarah Chen"
-                    role="Lead Engineer, CloudScale"
-                    image="/placeholder.svg?height=400&width=400"
-                    topic="Serverless Architecture"
+                    name="Analía Arbuet"
+                    role="Un puesto, en una empresa"
+                    image="https://i.pravatar.cc/401"
+                    topic="Marketing"
                 />
                 <SpeakerCard
-                    name="Michael Rodriguez"
-                    role="Founder, DevSecOps"
-                    image="/placeholder.svg?height=400&width=400"
-                    topic="Security in DevOps"
+                    name="Momo"
+                    role="Un puesto, en una empresa"
+                    image="https://i.pravatar.cc/402"
+                    topic="Marketing"
                 />
                 <SpeakerCard
-                    name="Priya Patel"
-                    role="Product Director, UXMasters"
-                    image="/placeholder.svg?height=400&width=400"
-                    topic="Future of UX Design"
+                    name="Juan Cosidó"
+                    role="Profesor en la UCU"
+                    image="https://i.pravatar.cc/403"
+                    topic="Marketing"
                 />
-              </div>
-
-              <div className="flex justify-center mt-10">
-                <Button variant="outline" size="lg">
-                  Ver todos los Speakers<ChevronRight className="ml-2 h-4 w-4" />
-                </Button>
               </div>
             </div>
           </section>
@@ -336,7 +330,7 @@ return (
 
               <div className="grid md:grid-cols-2 gap-8 mt-12">
                 <div className="relative h-[400px] rounded-lg overflow-hidden">
-                  <Image src="/placeholder.svg?height=800&width=1200" alt="Lugar" fill className="object-cover" />
+                  <Image src="/san-jose.png" alt="Lugar" fill className="object-cover" />
                 </div>
                 <div className="flex flex-col justify-center">
                   <h3 className="text-2xl font-bold mb-4">Sala de Eventos San José</h3>
@@ -431,7 +425,7 @@ return (
               <div className="text-center mt-12">
                 <p className="text-muted-foreground mb-4">¿Tenés otra pregunta?</p>
                 <Button asChild>
-                  <Link href="mailto:info-ucx@ucu.edu.uy">Contactanos</Link>
+                  <Link href="mailto:info-ucx@ucu.edu.uy" className="text-blue-800 underline">Contactanos</Link>
                 </Button>
               </div>
             </div>

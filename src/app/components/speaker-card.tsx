@@ -12,7 +12,7 @@ export default function SpeakerCard({ name, role, image, topic }: SpeakerCardPro
     <div className="group relative overflow-hidden rounded-lg border bg-background transition-all hover:shadow-md">
       <div className="aspect-square overflow-hidden">
         <Image
-          src={image || "/placeholder.svg"}
+          src={image || "speaker image"}
           alt={name}
           width={400}
           height={400}
