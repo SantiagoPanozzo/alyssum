@@ -16,11 +16,11 @@ export default function EventLandingPage() {
   const eventDescription =
     "Join us for the most anticipated tech conference of the year. Connect with industry leaders, discover cutting-edge technologies, and expand your professional network."
 
-  return (
-    <div className="flex min-h-screen flex-col">
+return (
+    <div className="flex min-h-screen flex-col justify-center justify-items-center items-center">
       {/* Navigation */}
       <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+        <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2 font-bold text-xl">
             <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
               <span className="text-primary-foreground">TC</span>
@@ -63,7 +63,7 @@ export default function EventLandingPage() {
               priority
             />
           </div>
-          <div className="container relative z-20 py-24 md:py-32 lg:py-40">
+          <div className="container relative z-20 py-24 md:py-32 lg:py-40 px-4 md:px-6">
             <div className="grid gap-8 md:grid-cols-2 items-center">
               <div className="flex flex-col gap-4">
                 <div className="inline-flex items-center rounded-full border px-4 py-1.5 text-sm font-medium">
@@ -125,7 +125,7 @@ export default function EventLandingPage() {
 
         {/* About Section */}
         <section id="about" className="py-16 md:py-24">
-          <div className="container">
+          <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">About the Event</h2>
               <div className="h-1 w-20 bg-primary my-6"></div>
@@ -186,7 +186,7 @@ export default function EventLandingPage() {
 
         {/* Speakers Section */}
         <section id="speakers" className="py-16 md:py-24 bg-muted/30">
-          <div className="container">
+          <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Featured Speakers</h2>
               <div className="h-1 w-20 bg-primary my-6"></div>
@@ -232,7 +232,7 @@ export default function EventLandingPage() {
 
         {/* Schedule Section */}
         <section id="schedule" className="py-16 md:py-24">
-          <div className="container">
+          <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Event Schedule</h2>
               <div className="h-1 w-20 bg-primary my-6"></div>
@@ -286,7 +286,7 @@ export default function EventLandingPage() {
 
         {/* Venue Section */}
         <section id="venue" className="py-16 md:py-24 bg-muted/30">
-          <div className="container">
+          <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Venue</h2>
               <div className="h-1 w-20 bg-primary my-6"></div>
@@ -327,7 +327,7 @@ export default function EventLandingPage() {
 
         {/* Registration Section */}
         <section id="register" className="py-16 md:py-24">
-          <div className="container">
+          <div className="container px-4 md:px-6">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">Register Now</h2>
@@ -407,7 +407,7 @@ export default function EventLandingPage() {
 
         {/* FAQ Section */}
         <section id="faq" className="py-16 md:py-24 bg-muted/30">
-          <div className="container">
+          <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Frequently Asked Questions</h2>
               <div className="h-1 w-20 bg-primary my-6"></div>
@@ -431,7 +431,7 @@ export default function EventLandingPage() {
 
         {/* Sponsors Section */}
         <section className="py-16 md:py-24">
-          <div className="container">
+          <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Our Sponsors</h2>
               <div className="h-1 w-20 bg-primary my-6"></div>
@@ -524,7 +524,6 @@ export default function EventLandingPage() {
           </div>
         </section>
       </main>
-
       {/* Footer */}
       <footer className="bg-muted py-12">
         <div className="container">
