@@ -67,7 +67,7 @@ export default function RegistrationForm() {
         <Label htmlFor="terms">Acepto los términos y condiciones del evento.</Label>
       </div>
 
-      <Button type="submit" className="w-full" disabled={isSubmitting}>
+      <Button type="submit" disabled={isSubmitting} className="w-full transition duration-300 hover:shadow-md hover:shadow-indigo-200 border border-indigo-300">
         {isSubmitting ? "Procesando..." : "Registro completo"}
       </Button>
     </form>
