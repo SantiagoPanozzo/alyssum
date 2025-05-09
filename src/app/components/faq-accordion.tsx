@@ -1,39 +1,41 @@
 "use client"
 
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/app/components/ui/accordion"
 
 export default function FAQAccordion() {
   const faqs = [
     {
-      question: "What is included in the registration fee?",
-      answer:
-        "The registration fee includes access to all keynotes, sessions, and workshops, as well as lunch and refreshments during the event. It also includes access to networking events and the conference app.",
+      "question": "¿Cuándo y dónde es el evento?",
+      "answer": "El evento es el miércoles 9 de julio de 2025 en el Edificio San José de la Universidad Católica del Uruguay."
     },
     {
-      question: "Is there a refund policy?",
-      answer:
-        "Yes, we offer full refunds up to 30 days before the event. After that, refunds are available at 50% up to 14 days before the event. No refunds are available within 14 days of the event, but you can transfer your ticket to someone else.",
+      "question": "¿Quiénes participan como speakers?",
+      "answer": "Van a participar profesionales reconocidos del marketing de servicios, que compartirán experiencias, casos y buenas prácticas."
     },
     {
-      question: "Are there accommodations near the venue?",
-      answer:
-        "Yes, we have partnered with several hotels near the venue to offer special rates for attendees. Details will be provided in your registration confirmation email.",
+      "question": "¿Cuánto cuesta la entrada anticipada?",
+      "answer": "La entrada anticipada cuesta $100 y se puede comprar a través de RedTickets."
     },
     {
-      question: "Will sessions be recorded?",
-      answer:
-        "Yes, all keynotes and sessions will be recorded and made available to registered attendees after the event.",
+      "question": "¿Los alumnos de la UCU tienen que pagar entrada?",
+      "answer": "No, los alumnos de la UCU entran gratis, pero igual deben registrarse y sacar la entrada por RedTickets usando un código de 100% de descuento que se les envía por mail."
     },
     {
-      question: "Is there a dress code?",
-      answer:
-        "The dress code is business casual. We recommend comfortable attire as you'll be moving between sessions throughout the day.",
+      "question": "¿Cómo reciben el código de descuento los estudiantes de la UCU?",
+      "answer": "Una vez que se registran con su mail institucional, les llega un mail con el código de descuento para canjear en RedTickets."
     },
     {
-      question: "How can I become a sponsor?",
-      answer:
-        "We offer various sponsorship packages to suit different needs and budgets. Please contact our sponsorship team at sponsors@techconnect2025.com for more information.",
+      "question": "¿Dónde se compran las entradas?",
+      "answer": "Todas las entradas, incluidas las gratuitas para estudiantes de la UCU, se gestionan a través de RedTickets. El link se envía por mail después del registro."
     },
+    {
+      "question": "¿Hay que registrarse aunque sea estudiante o ya tenga la entrada?",
+      "answer": "Sí, todos los que quieran participar deben registrarse en la página del evento para recibir el link de RedTickets y más información."
+    },
+    {
+      "question": "¿Puedo registrarme con cualquier correo si soy estudiante de la UCU?",
+      "answer": "No, si sos estudiante de la UCU tenés que usar tu mail institucional (@ucu.edu.uy) para poder recibir el código de descuento."
+    }
   ]
 
   return (
@@ -47,4 +49,3 @@ export default function FAQAccordion() {
     </Accordion>
   )
 }
-

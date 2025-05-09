@@ -3,12 +3,11 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
+import { Button } from "@/app/components/ui/button"
+import { Input } from "@/app/components/ui/input"
+import { Label } from "@/app/components/ui/label"
+import { RadioGroup, RadioGroupItem } from "@/app/components/ui/radio-group"
+import { Checkbox } from "@/app/components/ui/checkbox"
 
 export default function RegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -33,11 +32,10 @@ export default function RegistrationForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-xl font-bold mb-2">Registration Successful!</h3>
+        <h3 className="text-xl font-bold mb-2">¡Registro exitoso!</h3>
         <p className="text-muted-foreground mb-4">
-          Thank you for registering for TechConnect 2025. We've sent a confirmation email with all the details.
+          Gracias por inscribirte a UCX 2025. Te enviamos un mail para que puedas acceder a RedTickets y conseguir tu entrada.
         </p>
-        <Button onClick={() => setIsSuccess(false)}>Register Another Person</Button>
       </div>
     )
   }
@@ -45,7 +43,7 @@ export default function RegistrationForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid gap-2">
-        <Label htmlFor="name">Full Name</Label>
+        <Label htmlFor="name">Nombre Completo</Label>
         <Input id="name" placeholder="John Doe" required />
       </div>
 
@@ -55,63 +53,23 @@ export default function RegistrationForm() {
       </div>
 
       <div className="grid gap-2">
-        <Label htmlFor="company">Company/Organization</Label>
-        <Input id="company" placeholder="Acme Inc." />
-      </div>
-
-      <div className="grid gap-2">
-        <Label htmlFor="jobTitle">Job Title</Label>
-        <Input id="jobTitle" placeholder="Software Engineer" />
-      </div>
-
-      <div className="grid gap-2">
         <Label>Ticket Type</Label>
         <RadioGroup defaultValue="early-bird">
           <div className="flex items-center space-x-2">
-            <RadioGroupItem value="early-bird" id="early-bird" />
-            <Label htmlFor="early-bird">Early Bird Ticket ($499)</Label>
-          </div>
-          <div className="flex items-center space-x-2">
-            <RadioGroupItem value="standard" id="standard" />
-            <Label htmlFor="standard">Standard Ticket ($699)</Label>
-          </div>
-          <div className="flex items-center space-x-2">
             <RadioGroupItem value="vip" id="vip" />
-            <Label htmlFor="vip">VIP Ticket ($999)</Label>
+            <Label htmlFor="vip">Entrada Anticipada ($80)</Label>
           </div>
         </RadioGroup>
       </div>
 
-      <div className="grid gap-2">
-        <Label htmlFor="dietary">Dietary Requirements</Label>
-        <Select>
-          <SelectTrigger id="dietary">
-            <SelectValue placeholder="Select dietary requirements" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="none">None</SelectItem>
-            <SelectItem value="vegetarian">Vegetarian</SelectItem>
-            <SelectItem value="vegan">Vegan</SelectItem>
-            <SelectItem value="gluten-free">Gluten-free</SelectItem>
-            <SelectItem value="other">Other (please specify)</SelectItem>
-          </SelectContent>
-        </Select>
-      </div>
-
-      <div className="flex items-center space-x-2">
-        <Checkbox id="workshop" />
-        <Label htmlFor="workshop">I would like to attend the pre-conference workshops (additional $199)</Label>
-      </div>
-
       <div className="flex items-center space-x-2">
         <Checkbox id="terms" required />
-        <Label htmlFor="terms">I agree to the terms and conditions</Label>
+        <Label htmlFor="terms">Acepto los términos y condiciones del evento.</Label>
       </div>
 
       <Button type="submit" className="w-full" disabled={isSubmitting}>
-        {isSubmitting ? "Processing..." : "Complete Registration"}
+        {isSubmitting ? "Procesando..." : "Registro completo"}
       </Button>
     </form>
   )
 }
-
