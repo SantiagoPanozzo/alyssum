@@ -1,13 +1,13 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Clock, MapPin, Users, ChevronRight, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import EventCountdown from "@/components/event-countdown"
-import SpeakerCard from "@/components/speaker-card"
-import ScheduleItem from "@/components/schedule-item"
-import FAQAccordion from "@/components/faq-accordion"
-import RegistrationForm from "@/components/registration-form"
-import HorizontalImageScroller from "@/components/horizontalImageScroller";
+import { Button } from "./components/ui/button"
+import EventCountdown from "./components/event-countdown"
+import SpeakerCard from "./components/speaker-card"
+import ScheduleItem from "./components/schedule-item"
+import FAQAccordion from "./components/faq-accordion"
+import RegistrationForm from "./components/registration-form"
+import HorizontalImageScroller from "./components/horizontalImageScroller";
 
 export default function EventLandingPage() {
   // Event details
