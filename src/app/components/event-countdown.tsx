@@ -36,23 +36,23 @@ export default function EventCountdown({ targetDate }: CountdownProps) {
 
   return (
     <div className="text-center">
-      <h3 className="text-xl font-bold mb-4">Event Starts In</h3>
+      <h3 className="text-xl font-bold mb-4">El evento empieza en:</h3>
       <div className="grid grid-cols-4 gap-2">
         <div className="flex flex-col items-center">
           <div className="text-3xl font-bold text-primary">{timeLeft.days}</div>
-          <div className="text-xs text-muted-foreground uppercase">Days</div>
+          <div className="text-xs text-muted-foreground uppercase">Días</div>
         </div>
         <div className="flex flex-col items-center">
           <div className="text-3xl font-bold text-primary">{timeLeft.hours}</div>
-          <div className="text-xs text-muted-foreground uppercase">Hours</div>
+          <div className="text-xs text-muted-foreground uppercase">Horas</div>
         </div>
         <div className="flex flex-col items-center">
           <div className="text-3xl font-bold text-primary">{timeLeft.minutes}</div>
-          <div className="text-xs text-muted-foreground uppercase">Minutes</div>
+          <div className="text-xs text-muted-foreground uppercase">Minutos</div>
         </div>
         <div className="flex flex-col items-center">
           <div className="text-3xl font-bold text-primary">{timeLeft.seconds}</div>
-          <div className="text-xs text-muted-foreground uppercase">Seconds</div>
+          <div className="text-xs text-muted-foreground uppercase">Segundos</div>
         </div>
       </div>
     </div>

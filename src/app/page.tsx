@@ -7,6 +7,7 @@ import SpeakerCard from "@/components/speaker-card"
 import ScheduleItem from "@/components/schedule-item"
 import FAQAccordion from "@/components/faq-accordion"
 import RegistrationForm from "@/components/registration-form"
+import HorizontalImageScroller from "@/components/horizontalImageScroller";
 
 export default function EventLandingPage() {
   // Event details
@@ -23,38 +24,32 @@ return (
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center gap-2 font-bold text-xl">
             <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground">TC</span>
+              <span className="text-primary-foreground"><Image src="/ucx.png" alt="" width="800" height="800"/> </span>
             </div>
             {eventName}
           </div>
           <nav className="hidden md:flex gap-6">
             <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary">
-              About
+              Acerca del Evento
             </Link>
             <Link href="#speakers" className="text-sm font-medium transition-colors hover:text-primary">
               Speakers
             </Link>
             <Link href="#schedule" className="text-sm font-medium transition-colors hover:text-primary">
-              Schedule
+              Cronograma
             </Link>
             <Link href="#venue" className="text-sm font-medium transition-colors hover:text-primary">
-              Venue
+              Lugar
             </Link>
             <Link href="#faq" className="text-sm font-medium transition-colors hover:text-primary">
-              FAQ
+              Preguntas Frecuentes
             </Link>
           </nav>
           <Button asChild>
-            <Link href="#register">Register Now</Link>
+            <Link href="#register">Inscribite Ya</Link>
           </Button>
         </div>
       </header>
-                Acerca del Evento
-                Speakers
-                Cronograma
-                Lugar
-                Preguntas Frecuentes
-              <Link href="#register">Inscribite Ahora</Link>
 
       <main className="flex-1">
         {/* Hero Section */}
@@ -74,7 +69,7 @@ return (
               <div className="flex flex-col gap-4">
                 <div className="inline-flex items-center rounded-full border px-4 py-1.5 text-sm font-medium">
                   <span className="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
-                  June 15-17, 2025
+                  9 de Julio de 2025
                 </div>
                 <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
                   {eventName}
@@ -84,11 +79,11 @@ return (
                 <div className="flex flex-col sm:flex-row gap-3 mt-2">
                   <Button size="lg" asChild>
                     <Link href="#register">
-                      Register Now <ArrowRight className="ml-2 h-4 w-4" />
+                      Inscribite Ya<ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                   <Button size="lg" variant="outline" asChild>
-                    <Link href="#schedule">View Schedule</Link>
+                    <Link href="#schedule">Ver Cronograma</Link>
                   </Button>
                 </div>
               </div>
@@ -98,29 +93,29 @@ return (
                   <div className="flex items-center gap-3">
                     <Calendar className="h-5 w-5 text-primary" />
                     <div>
-                      <p className="font-medium">June 15-17, 2025</p>
-                      <p className="text-sm text-muted-foreground">3-day event</p>
+                      <p className="font-medium">9 de Julio de 2025</p>
+                      <p className="text-sm text-muted-foreground">Evento de día único</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <Clock className="h-5 w-5 text-primary" />
                     <div>
-                      <p className="font-medium">9:00 AM - 6:00 PM</p>
-                      <p className="text-sm text-muted-foreground">Daily schedule</p>
+                      <p className="font-medium">18:30 a 22:30</p>
+                      <p className="text-sm text-muted-foreground">Cronograma del día</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <MapPin className="h-5 w-5 text-primary" />
                     <div>
-                      <p className="font-medium">Tech Convention Center</p>
-                      <p className="text-sm text-muted-foreground">123 Innovation Ave, San Francisco</p>
+                      <p className="font-medium">UCU: Edificio San José</p>
+                      <p className="text-sm text-muted-foreground">8 de Octubre 2733, Montevideo</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <Users className="h-5 w-5 text-primary" />
                     <div>
-                      <p className="font-medium">1,500+ Attendees</p>
-                      <p className="text-sm text-muted-foreground">Industry professionals</p>
+                      <p className="font-medium">+300 Invitados</p>
+                      <p className="text-sm text-muted-foreground">Profesionales de la industria</p>
                     </div>
                   </div>
                 </div>
@@ -128,27 +123,11 @@ return (
             </div>
           </div>
         </section>
-                  src="/ucu-bg.jpeg"
-                  alt="Fondo del evento"
-                  fill
-                  className="object-cover"
-                  priority
-                    9 de Julio 2025
-                        Inscribite Ahora <ArrowRight className="ml-2 h-4 w-4" />
-                      <Link href="#schedule">Ver Cronograma</Link>
-                        <p className="font-medium">9 de Julio de 2025</p>
-                        <p className="text-sm text-muted-foreground">Evento de día único</p>
-                        <p className="text-sm text-muted-foreground">Evento vespertino</p>
-                        <p className="font-medium">Edificio San José, Universidad Católica del Uruguay</p>
-                        <p className="text-sm text-muted-foreground">8 de Octubre 2733, Montevideo</p>
-                        <p className="font-medium">+300 invitados</p>
-                        <p className="text-sm text-muted-foreground">Profesionales de la industria</p>
-
           {/* About Section */}
           <section id="about" className="py-16 md:py-24">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">About the Event</h2>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Acerca del Evento</h2>
                 <div className="h-1 w-20 bg-primary my-6"></div>
                 <p className="text-xl text-muted-foreground max-w-[800px]">
                   UCX es un evento abierto al público para el que invitamos a todo aquél que esté interesado en el área del
@@ -390,7 +369,7 @@ return (
             <div className="container px-4 md:px-6">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">Register Now</h2>
+                  <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">Inscribite Ya</h2>
                   <p className="text-xl text-muted-foreground mb-8">
                     Asegurá tu entrada para UCX 2025. Ingresa tu mail y te enviaremos una invitación para que ingreses a RedTickets.
                     ¡Los alumnos de la UCU reciben un código gratis!
@@ -471,35 +450,8 @@ return (
 
               <div className="mt-12">
                 <h3 className="text-xl font-bold mb-6 text-center">Sponsors</h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-                  <Image
-                      src="/amazon.svg"
-                      alt="Sponsor 1"
-                      width={200}
-                      height={100}
-                      className="grayscale hover:grayscale-0 transition-all duration-300"
-                  />
-                  <Image
-                      src="/"
-                      alt="/google.svg"
-                      width={200}
-                      height={100}
-                      className="grayscale hover:grayscale-0 transition-all duration-300"
-                  />
-                  <Image
-                      src="/microsoft.svg"
-                      alt="Sponsor 3"
-                      width={200}
-                      height={100}
-                      className="grayscale hover:grayscale-0 transition-all duration-300"
-                  />
-                  <Image
-                      src="/nike.svg"
-                      alt="Sponsor 4"
-                      width={200}
-                      height={100}
-                      className="grayscale hover:grayscale-0 transition-all duration-300"
-                  />
+                <div className="items-center justify-items-center">
+                  <HorizontalImageScroller/>
                 </div>
 
               </div>
