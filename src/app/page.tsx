@@ -219,25 +219,25 @@ return (
                 <SpeakerCard
                     name="Santiago Fernandez"
                     role="Un puesto, en una empresa"
-                    image="https://i.pravatar.cc/400"
+                    image="/santiagofernandez.jpg"
                     topic="Marketing"
                 />
                 <SpeakerCard
                     name="Analía Arbuet"
                     role="Un puesto, en una empresa"
-                    image="https://i.pravatar.cc/401"
+                    image="/analiaarbuet.jpg"
                     topic="Marketing"
                 />
                 <SpeakerCard
                     name="Momo"
                     role="Un puesto, en una empresa"
-                    image="https://i.pravatar.cc/402"
+                    image="/momo.jpg"
                     topic="Marketing"
                 />
                 <SpeakerCard
                     name="Juan Cosidó"
                     role="Profesor en la UCU"
-                    image="https://i.pravatar.cc/403"
+                    image="/juancosido.jpg"
                     topic="Marketing"
                 />
               </div>
