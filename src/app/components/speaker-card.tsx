@@ -9,7 +9,7 @@ interface SpeakerCardProps {
 
 export default function SpeakerCard({ name, role, image, topic }: SpeakerCardProps) {
   return (
-    <div className="group relative overflow-hidden rounded-lg border bg-background transition-all hover:shadow-md">
+    <div className="group relative overflow-hidden rounded-lg border bg-background transition-all hover:shadow-md transition duration-300 hover:shadow-xl hover:shadow-indigo-200 border border-slate-300">
       <div className="aspect-square overflow-hidden">
         <Image
           src={image || "speaker image"}

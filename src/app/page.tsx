@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Calendar, Clock, MapPin, Users, ChevronRight, ArrowRight } from "lucide-react"
+import { Calendar, Clock, MapPin, Users, ArrowRight } from "lucide-react"
 import { Button } from "./components/ui/button"
 import EventCountdown from "./components/event-countdown"
 import SpeakerCard from "./components/speaker-card"
@@ -8,6 +8,8 @@ import ScheduleItem from "./components/schedule-item"
 import FAQAccordion from "./components/faq-accordion"
 import RegistrationForm from "./components/registration-form"
 import HorizontalImageScroller from "./components/horizontalImageScroller";
+import GoogleMapsButton from "./components/ui/google-maps-button"
+import { ScrollLink } from "./components/ui/scroll-link"
 
 export default function EventLandingPage() {
   // Event details
@@ -29,24 +31,38 @@ return (
             {eventName}
           </div>
           <nav className="hidden md:flex gap-6">
-            <Link href="#about" className="text-sm font-medium transition-colors hover:text-primary">
-              Acerca del Evento
-            </Link>
-            <Link href="#speakers" className="text-sm font-medium transition-colors hover:text-primary">
-              Speakers
-            </Link>
-            <Link href="#schedule" className="text-sm font-medium transition-colors hover:text-primary">
-              Cronograma
-            </Link>
-            <Link href="#venue" className="text-sm font-medium transition-colors hover:text-primary">
-              Lugar
-            </Link>
-            <Link href="#faq" className="text-sm font-medium transition-colors hover:text-primary">
-              Preguntas Frecuentes
-            </Link>
+            <ScrollLink href="#about" className="text-sm font-medium transition-colors hover:text-blue-500">
+              <p className="hover:text-sky-700 transition">
+                Acerca del Evento
+              </p>
+            </ScrollLink>
+            <ScrollLink href="#speakers" className="text-sm font-medium transition-colors hover:text-primary">
+              <p className="hover:text-sky-700 transition">
+                Speakers
+              </p>
+            </ScrollLink>
+            <ScrollLink href="#schedule" className="text-sm font-medium transition-colors hover:text-primary">
+              <p className="hover:text-sky-700 transition">
+                Cronograma
+              </p>
+            </ScrollLink>
+            <ScrollLink href="#venue" className="text-sm font-medium transition-colors hover:text-primary">
+              <p className="hover:text-sky-700 transition">
+                Lugar
+              </p>
+            </ScrollLink>
+            <ScrollLink href="#faq" className="text-sm font-medium transition-colors hover:text-primary">
+              <p className="hover:text-sky-700 transition">
+                Preguntas Frecuentes
+              </p>
+            </ScrollLink>
           </nav>
-          <Button asChild>
-            <Link href="#register">Inscribite Ya</Link>
+          <Button size="sm" variant="outline" asChild className="hover:text-sky-700 transition">
+            <ScrollLink href="#register">
+              <p >
+                Inscribite Ya
+              </p>
+            </ScrollLink>
           </Button>
         </div>
       </header>
@@ -57,7 +73,7 @@ return (
           <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-background z-10" />
           <div className="absolute inset-0">
             <Image
-              src="/bg.jpg"
+              src="/bg.png"
               alt="Event background"
               fill
               className="object-cover opacity-30 absolute"
@@ -77,13 +93,16 @@ return (
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-[600px]">{eventDescription}</p>
                 <div className="flex flex-col sm:flex-row gap-3 mt-2">
-                  <Button size="lg" asChild>
-                    <Link href="#register">
-                      Inscribite Ya<ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+                  <Button size="lg" asChild className="transition duration-300 hover:shadow-lg hover:shadow-indigo-200 border border-slate-800">
+                    <ScrollLink href="#register" className="hover:text-sky-700 ">
+                      <p className="transition">
+                        Inscribite Ya
+                      </p>
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </ScrollLink>
                   </Button>
-                  <Button size="lg" variant="outline" asChild>
-                    <Link href="#schedule">Ver Cronograma</Link>
+                  <Button size="lg" variant="outline" asChild className="transition hover:text-sky-700 transition duration-300 hover:shadow-lg hover:shadow-indigo-200 border border-slate-800">
+                    <ScrollLink href="#schedule"><p>Ver Cronograma</p></ScrollLink>
                   </Button>
                 </div>
               </div>
@@ -137,7 +156,7 @@ return (
               </div>
 
               <div className="grid md:grid-cols-3 gap-8 mt-12">
-                <div className="bg-muted/50 p-6 rounded-lg border">
+                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition duration-300 hover:shadow-xl hover:shadow-indigo-200 border border-slate-300">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <Users className="h-6 w-6 text-primary" />
                   </div>
@@ -147,7 +166,7 @@ return (
                   </p>
                 </div>
 
-                <div className="bg-muted/50 p-6 rounded-lg border">
+                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition duration-300 hover:shadow-xl hover:shadow-indigo-200 border border-slate-300">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path
@@ -164,7 +183,7 @@ return (
                   </p>
                 </div>
 
-                <div className="bg-muted/50 p-6 rounded-lg border">
+                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition duration-300 hover:shadow-xl hover:shadow-indigo-200 border border-slate-300">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path
@@ -305,12 +324,6 @@ return (
                     />
                   </div>
                 </div>
-
-                <div className="flex justify-center mt-10">
-                  <Button variant="outline" size="lg">
-                    Ver Cronograma Completo <ChevronRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
               </div>
             </div>
           </section>
@@ -348,9 +361,10 @@ return (
                       y una oportunidad de interactuar con grandes profesionales de la industria.
                     </p>
                     <div className="pt-4">
-                      <Button variant="outline" size="lg">
-                        Ver Direcciones
-                      </Button>
+                      <GoogleMapsButton
+                        buttonText="Ver Direcciones"
+                        mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.715006282324!2d-56.1622713889317!3d-34.888502172740296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f80562d2e5009%3A0x39e8385cceee6cea!2sEdificio%20San%20Jos%C3%A9%20%7C%20Universidad%20Cat%C3%B3lica%20del%20Uruguay!5e0!3m2!1ses-419!2suy!4v1746826346244!5m2!1ses-419!2suy"
+                      />
                     </div>
                   </div>
                 </div>
@@ -424,8 +438,8 @@ return (
 
               <div className="text-center mt-12">
                 <p className="text-muted-foreground mb-4">¿Tenés otra pregunta?</p>
-                <Button asChild>
-                  <Link href="mailto:info-ucx@ucu.edu.uy" className="text-blue-800 underline">Contactanos</Link>
+                <Button asChild className="transition duration-300 hover:shadow-lg hover:shadow-indigo-200 border border-slate-300">
+                  <Link href="mailto:ucxmarketingdeserviciosycx@gmail.com" >Contactanos</Link>
                 </Button>
               </div>
             </div>
@@ -443,7 +457,6 @@ return (
               </div>
 
               <div className="mt-12">
-                <h3 className="text-xl font-bold mb-6 text-center">Sponsors</h3>
                 <div className="items-center justify-items-center">
                   <HorizontalImageScroller/>
                 </div>
@@ -460,9 +473,6 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div>
                 <div className="flex items-center gap-2 font-bold text-xl mb-4">
-                  <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-                    <span className="text-primary-foreground">UCX</span>
-                  </div>
                   {eventName}
                 </div>
                 <p className="text-muted-foreground mb-4">
@@ -491,29 +501,46 @@ return (
                 <h3 className="font-bold text-lg mb-4">Links</h3>
                 <ul className="space-y-2">
                   <li>
-                    <Link href="#about" className="text-muted-foreground hover:text-primary">
-                      Acerca del Evento
-                    </Link>
+                    <ScrollLink href="#about" className="text-sm font-medium transition-colors hover:text-blue-500">
+                      <p className="hover:text-sky-700 transition">
+                        Acerca del Evento
+                      </p>
+                    </ScrollLink>
                   </li>
                   <li>
-                    <Link href="#speakers" className="text-muted-foreground hover:text-primary">
-                      Speakers
-                    </Link>
+                    <ScrollLink href="#speakers" className="text-sm font-medium transition-colors hover:text-primary">
+                      <p className="hover:text-sky-700 transition">
+                        Speakers
+                      </p>
+                    </ScrollLink>
                   </li>
                   <li>
-                    <Link href="#schedule" className="text-muted-foreground hover:text-primary">
-                      Cronograma
-                    </Link>
+                    <ScrollLink href="#schedule" className="text-sm font-medium transition-colors hover:text-primary">
+                      <p className="hover:text-sky-700 transition">
+                        Cronograma
+                      </p>
+                    </ScrollLink>
                   </li>
                   <li>
-                    <Link href="#venue" className="text-muted-foreground hover:text-primary">
-                      Lugar
-                    </Link>
+                    <ScrollLink href="#venue" className="text-sm font-medium transition-colors hover:text-primary">
+                      <p className="hover:text-sky-700 transition">
+                        Lugar
+                      </p>
+                    </ScrollLink>
                   </li>
                   <li>
-                    <Link href="#register" className="text-muted-foreground hover:text-primary">
-                      Registro
-                    </Link>
+                    <ScrollLink href="#faq" className="text-sm font-medium transition-colors hover:text-primary">
+                      <p className="hover:text-sky-700 transition">
+                        Preguntas Frecuentes
+                      </p>
+                    </ScrollLink>
+                  </li>
+                  <li>
+                    <ScrollLink href="#register" className="text-sm font-medium transition-colors hover:text-primary">
+                      <p className="hover:text-sky-700 transition">
+                        Inscribite Ya 
+                      </p>
+                    </ScrollLink>
                   </li>
                 </ul>
               </div>
@@ -530,7 +557,7 @@ return (
                           d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    <span className="text-muted-foreground">info-ucx@ucu.edu.uy</span>
+                    <span className="text-muted-foreground">ucxmarketingdeserviciosycx@gmail.com</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <svg className="h-5 w-5 text-primary mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
