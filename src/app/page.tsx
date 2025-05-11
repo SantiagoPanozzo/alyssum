@@ -218,13 +218,13 @@ return (
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
                 <SpeakerCard
                     name="Santiago Fernandez"
-                    role="Un puesto, en una empresa"
+                    role="CEO en Orange Attitude | Consultor & Keynote Speaker Internacional"
                     image="/santiagofernandez.jpg"
-                    topic="Marketing"
+                    topic=" Marketing & Sales Automation, Lead Scoring, IA y Chatbots"
                 />
                 <SpeakerCard
                     name="Analía Arbuet"
-                    role="Un puesto, en una empresa"
+                    role="Gerente de Marketing y Comunicaciones, docente y emprendedora"
                     image="/analiaarbuet.jpg"
                     topic="Marketing"
                 />
@@ -236,9 +236,9 @@ return (
                 />
                 <SpeakerCard
                     name="Juan Cosidó"
-                    role="Profesor en la UCU"
+                    role="Docente en UCU Business School y Consultor"
                     image="/juancosido.jpg"
-                    topic="Marketing"
+                    topic="Marketing de Servicios y Customer Experience"
                 />
               </div>
             </div>
@@ -265,13 +265,13 @@ return (
                     <ScheduleItem
                         time="18:30 - 19:00"
                         title="Convocatoria de invitados"
-                        speaker=""
+                        speaker="Ninguno"
                         location="Edificio San José"
                     />
                     <ScheduleItem
                         time="19:00 - 19:10"
-                        title="Introducción: Inicio del Evento"
-                        speaker="Juan Cosidó Gutierrez"
+                        title="Comienzo de Evento / Presentación"
+                        speaker="Ana Laura Aguiar y Leandro Barral"
                         location="Edificio San José"
                     />
                     <ScheduleItem
@@ -282,8 +282,8 @@ return (
                     />
                     <ScheduleItem
                         time="19:40 - 19:45"
-                        title="Break: Descanso y Presentación del Speaker"
-                        speaker="Juan Cosidó Gutierrez"
+                        title="Break y Presentación del Siguiente Speaker"
+                        speaker="Ana Laura Aguiar y Leandro Barral"
                         location="Edificio San José"
                     />
                     <ScheduleItem
@@ -293,15 +293,27 @@ return (
                         location="Edificio San José"
                     />
                     <ScheduleItem
-                        time="20:15 - 20:30"
-                        title="Break: Charlemos"
-                        speaker="Juan Cosidó Gutierrez"
+                        time="20:15 - 20:25"
+                        title="Break"
+                        speaker="Ninguno"
+                        location="Edificio San José"
+                    />
+                    <ScheduleItem
+                        time="20:25 - 20:30"
+                        title="Presentación del Siguiente Speaker"
+                        speaker="Ana Laura Aguiar y Leandro Barral"
                         location="Edificio San José"
                     />
                     <ScheduleItem
                         time="20:30 - 21:00"
                         title="Charla: (tema...)"
                         speaker="Momo"
+                        location="Edificio San José"
+                    />
+                    <ScheduleItem
+                        time="21:00 - 21:05"
+                        title="Break y Presentación del Siguiente Speaker"
+                        speaker="Ana Laura Aguiar y Leandro Barral"
                         location="Edificio San José"
                     />
                     <ScheduleItem
@@ -313,13 +325,13 @@ return (
                     <ScheduleItem
                         time="21:35 - 21:45"
                         title="Cierre"
-                        speaker="Juan Cosidó Gutierrez"
+                        speaker="Ana Laura Aguiar y Leandro Barral"
                         location="Edificio San José"
                     />
                     <ScheduleItem
                         time="21:45"
-                        title="After: Apertivos y Música de Ambientación"
-                        speaker="¡Todos!"
+                        title="After: Aperitivos y Música de Ambientación"
+                        speaker="Ninguno"
                         location="Edificio San José"
                     />
                   </div>
