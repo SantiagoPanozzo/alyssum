@@ -1,7 +1,5 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
@@ -9,39 +7,46 @@ import { Label } from "./ui/label"
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group"
 import { Checkbox } from "./ui/checkbox"
 
-import { supabase } from "../lib/supabaseClient"
-
 export default function RegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [errorMsg, setErrorMsg] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault()
-  setIsSubmitting(true)
-  setErrorMsg(null)
+    e.preventDefault()
+    setIsSubmitting(true)
+    setErrorMsg(null)
 
-  const formData = new FormData(e.currentTarget)
-  const nombre = formData.get('nombre') as string
-  const email = formData.get('email') as string
+    const formData = new FormData(e.currentTarget)
+    const nombre = formData.get("nombre")?.toString() || ""
+    const email = formData.get("email")?.toString() || ""
 
-  const { error } = await supabase.functions.invoke('insert-asistente', {
-    body: { nombre, email },
-    headers: {
-      apikey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    },
-  })
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/insert-asistente`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_JWT!}`,
+        },
+        body: JSON.stringify({ nombre, email }),
+      })
 
-  if (error) {
-    setErrorMsg(error.message)
-    setIsSuccess(false)
-  } else {
-    setIsSuccess(true)
+      if (!response.ok) {
+        const json = await response.json()
+        setErrorMsg(json.error || "Algo salió mal.")
+        setIsSuccess(false)
+      } else {
+        setIsSuccess(true)
+      }
+    } catch (err) {
+      console.error("Network error:", err)
+      setErrorMsg("Error de red. Intenta de nuevo.")
+      setIsSuccess(false)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
-
-  setIsSubmitting(false)
-}
-
 
   if (isSuccess) {
     return (
@@ -95,12 +100,17 @@ export default function RegistrationForm() {
       </Button>
 
       {errorMsg && (
-        <div className="mt-4 p-4 text-white bg-red-500 border border-red-600 rounded-md">
-          <strong>Error: </strong>
-          {errorMsg}
+        <div
+          className={`mt-4 p-4 rounded-md border text-sm ${
+            errorMsg?.includes("email ya está registrado")
+              ? "bg-yellow-100 text-yellow-800 border-yellow-300"
+              : "bg-red-500 text-white border-red-600"
+          }`}
+        >
+          <strong>Error:</strong> {errorMsg}
         </div>
       )}
     </form>
-
   )
 }
+
