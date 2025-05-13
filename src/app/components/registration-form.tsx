@@ -113,9 +113,9 @@ export default function RegistrationForm() {
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full transition duration-300 hover:shadow-md hover:shadow-indigo-200 border border-indigo-300"
+        className="w-full transition duration-500 hover:cursor-pointer hover:bg-blue-400 hover:text-white hover:shadow-md hover:shadow-indigo-200 border border-indigo-300"
       >
-        {isSubmitting ? "Procesando..." : "Registro completo"}
+        {isSubmitting ? "Procesando..." : "Enviar"}
       </Button>
 
       {errorMsg && (
