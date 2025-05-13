@@ -12,6 +12,12 @@ export default function RegistrationForm() {
   const [isSuccess, setIsSuccess] = useState(false)
   const [errorMsg, setErrorMsg] = useState<string | null>(null)
 
+  const [email, setEmail] = useState("")
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value)
+  }
+  const hasUcuDiscount = email.endsWith("@correo.ucu.edu.uy") || email.endsWith("@ucu.edu.uy")
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -72,8 +78,21 @@ export default function RegistrationForm() {
       </div>
 
       <div className="grid gap-2">
-        <Label htmlFor="email">Email</Label>
-        <Input id="email" type="email" name="email" placeholder="john@example.com" required />
+	<Label htmlFor="email">Email</Label>
+	<Input
+	  id="email"
+	  type="email"
+	  name="email"
+	  placeholder="john@example.com"
+	  required
+	  value={email}
+	  onChange={handleEmailChange}
+	/>
+	{hasUcuDiscount && (
+	  <div className="mt-2 p-4 rounded-md border bg-green-100 text-green-800 border-green-300 animate-fade-in">
+	    🎉 Se te aplicará el <strong>descuento del 100%</strong>
+	  </div>
+	)}
       </div>
 
       <div className="grid gap-2">
