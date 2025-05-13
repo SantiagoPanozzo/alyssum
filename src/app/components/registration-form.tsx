@@ -9,7 +9,7 @@ import { Label } from "./ui/label"
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group"
 import { Checkbox } from "./ui/checkbox"
 
-import { supabase } from "../lib/supabaseClient.ts"
+import { supabase } from "../lib/supabaseClient"
 
 export default function RegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -25,10 +25,10 @@ export default function RegistrationForm() {
   const nombre = formData.get('nombre') as string
   const email = formData.get('email') as string
 
-  const { data, error } = await supabase.functions.invoke('insert-asistente', {
+  const { error } = await supabase.functions.invoke('insert-asistente', {
     body: { nombre, email },
     headers: {
-      apikey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+      apikey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     },
   })
 
