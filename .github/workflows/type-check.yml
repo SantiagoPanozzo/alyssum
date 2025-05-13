@@ -14,6 +14,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: Set up secrets as env vars
+        run: |
+          echo "Secrets are now available as environment variables"
+        env:
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY}}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
         
       - name: Setup Node.js
         uses: actions/setup-node@v3
