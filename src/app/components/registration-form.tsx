@@ -9,20 +9,39 @@ import { Label } from "./ui/label"
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group"
 import { Checkbox } from "./ui/checkbox"
 
+import { supabase } from "../lib/supabaseClient"
+
 export default function RegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
+  const [errorMsg, setErrorMsg] = useState<string | null>(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault()
+  setIsSubmitting(true)
+  setErrorMsg(null)
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setIsSuccess(true)
-    }, 1500)
+  const formData = new FormData(e.currentTarget)
+  const nombre = formData.get('nombre') as string
+  const email = formData.get('email') as string
+
+  const { error } = await supabase.functions.invoke('insert-asistente', {
+    body: { nombre, email },
+    headers: {
+      apikey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    },
+  })
+
+  if (error) {
+    setErrorMsg(error.message)
+    setIsSuccess(false)
+  } else {
+    setIsSuccess(true)
   }
+
+  setIsSubmitting(false)
+}
+
 
   if (isSuccess) {
     return (
@@ -43,13 +62,13 @@ export default function RegistrationForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid gap-2">
-        <Label htmlFor="name">Nombre Completo</Label>
-        <Input id="name" placeholder="John Doe" required />
+        <Label htmlFor="nombre">Nombre Completo</Label>
+        <Input id="nombre" name="nombre" placeholder="John Doe" required />
       </div>
 
       <div className="grid gap-2">
         <Label htmlFor="email">Email</Label>
-        <Input id="email" type="email" placeholder="john@example.com" required />
+        <Input id="email" type="email" name="email" placeholder="john@example.com" required />
       </div>
 
       <div className="grid gap-2">
@@ -67,9 +86,21 @@ export default function RegistrationForm() {
         <Label htmlFor="terms">Acepto los términos y condiciones del evento.</Label>
       </div>
 
-      <Button type="submit" disabled={isSubmitting} className="w-full transition duration-300 hover:shadow-md hover:shadow-indigo-200 border border-indigo-300">
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+        className="w-full transition duration-300 hover:shadow-md hover:shadow-indigo-200 border border-indigo-300"
+      >
         {isSubmitting ? "Procesando..." : "Registro completo"}
       </Button>
+
+      {errorMsg && (
+        <div className="mt-4 p-4 text-white bg-red-500 border border-red-600 rounded-md">
+          <strong>Error: </strong>
+          {errorMsg}
+        </div>
+      )}
     </form>
+
   )
 }
