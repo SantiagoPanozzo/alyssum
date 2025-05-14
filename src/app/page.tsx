@@ -240,7 +240,7 @@ return (
                 />
                 <SpeakerCard
                     name="Momo"
-                    role="Un puesto, en una empresa"
+                    role="Jerónimo Sánchez Varela. Padre, emprendedor y muy soñador. Café, pasta, dulce de leche"
                     image="/momo.jpg"
                     topics={["Marketing"]}
                 />
