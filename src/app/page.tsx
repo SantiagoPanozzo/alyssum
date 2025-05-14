@@ -57,7 +57,7 @@ return (
               </p>
             </ScrollLink>
           </nav>
-          <Button size="sm" variant="outline" asChild className="hover:text-sky-700 transition">
+          <Button size="sm" variant="outline" asChild className="hover:text-sky-700 transition duration-300 hover:border-indigo-400 hover:cursor-pointer hover:bg-blue-400 hover:text-white">
             <ScrollLink href="#register">
               <p >
                 Inscribite Ya
@@ -93,15 +93,15 @@ return (
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-[600px]">{eventDescription}</p>
                 <div className="flex flex-col sm:flex-row gap-3 mt-2">
-                  <Button size="lg" asChild className="transition duration-300 hover:shadow-lg hover:shadow-indigo-200 border border-slate-800">
-                    <ScrollLink href="#register" className="hover:text-sky-700 ">
+                  <Button size="lg" asChild className="transition duration-500 hover:cursor-pointer hover:bg-blue-400 hover:text-white hover:shadow-lg hover:shadow-indigo-200 border border-slate-800">
+                    <ScrollLink href="#register">
                       <p className="transition">
                         Inscribite Ya
                       </p>
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </ScrollLink>
                   </Button>
-                  <Button size="lg" variant="outline" asChild className="transition hover:text-sky-700 transition duration-300 hover:shadow-lg hover:shadow-indigo-200 border border-slate-800">
+                  <Button size="lg" variant="outline" asChild className="transition hover:bg-white hover:text-sky-700 transition duration-300 hover:shadow-lg hover:shadow-indigo-200 border border-slate-800">
                     <ScrollLink href="#schedule"><p>Ver Cronograma</p></ScrollLink>
                   </Button>
                 </div>
@@ -548,8 +548,8 @@ return (
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="#register" className="text-sm font-medium transition-colors hover:text-primary">
-                      <p className="hover:text-sky-700 transition">
+                    <ScrollLink href="#register" className="text-sm font-medium transition duration-300 hover:text-primary hover:cursor-pointer hover:bg-blue-400 hover:text-white ">
+                      <p className="hover:text-sky-700 transition ">
                         Inscribite Ya 
                       </p>
                     </ScrollLink>
