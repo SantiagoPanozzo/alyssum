@@ -239,9 +239,11 @@ return (
                     topics={["Marketing"]}
                 />
                 <SpeakerCard
-                    name="Momo"
-                    role="Un puesto, en una empresa"
-                    image="/momo.jpg"
+                    name="Jerónimo Sánchez Varela "
+                    role={`Padre, emprendedor y muy soñador
+
+		    Café, pasta, dulce de leche`}
+                    image="/momo.jpeg"
                     topics={["Marketing"]}
                 />
                 <SpeakerCard
