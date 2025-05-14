@@ -218,13 +218,13 @@ return (
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
                 <SpeakerCard
                     name="Santiago Fernandez"
-                    role="CEO en Orange Attitude | Consultor & Keynote Speaker Internacional"
+                    role="Santiago Fernández Sapelli, 43 años, padre de Joaco de 10. Divertido, simpático y con un lado ñoño fanático de la tecnología y la automatización. Se formó en Gerencia de Empresas en la Universidad ORT, donde desarrolló su veta de marketinero y vendedor nato, con tanta labia que lo siguen llamando como speaker desde varios países. ¿Tímido? Para nada: ha dado conferencias frente a más de 600 personas. Hoy dirige Orange Attitude – Consultancy & Digital Agency, la agencia que fundó a los 21 años y con la que viene impulsando marcas y mejorando la experiencia de clientes desde hace más de dos décadas."
                     image="/santiagofernandez.jpg"
                     topic=" Marketing & Sales Automation, Lead Scoring, IA y Chatbots"
                 />
                 <SpeakerCard
                     name="Analía Arbuet"
-                    role="Gerente de Marketing y Comunicaciones, docente y emprendedora"
+                    role="Lic. Analía Arbuet. Apasionada por el marketing y la lectura. Me encanta conectar marcas con personas y me apasiona la planificación y la estrategia. Más de 15 de años de trabajo en Marketing en diferentes empresas liderando equipos y comprometida con el logro de resultados."
                     image="/analiaarbuet.jpg"
                     topic="Marketing"
                 />
@@ -236,7 +236,7 @@ return (
                 />
                 <SpeakerCard
                     name="Juan Cosidó"
-                    role="Docente en UCU Business School y Consultor"
+                    role="Padre de Danielle y enamorado de Julia Helena; Juan Cosidó es un apasionado por las ideas que transforman y por las personas que las hacen realidad. Consultor, docente de UCU y speaker, lleva más de 20 años trabajando en la intersección entre marketing, experiencia de cliente y estrategia comercial, ayudando a empresas y organizaciones a conectar con sus clientes de manera más humana, efectiva y sostenible."
                     image="/juancosido.jpg"
                     topic="Marketing de Servicios y Customer Experience"
                 />
