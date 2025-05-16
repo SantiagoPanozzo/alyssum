@@ -74,7 +74,7 @@ export default function RegistrationForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid gap-2">
         <Label htmlFor="nombre">Nombre Completo</Label>
-        <Input id="nombre" name="nombre" placeholder="John Doe" required />
+        <Input id="nombre" name="nombre" placeholder="John Doe" className="border-slate-500 transition duration-150 ease-in-out hover:border-sky-600" required />
       </div>
 
       <div className="grid gap-2">
@@ -84,6 +84,7 @@ export default function RegistrationForm() {
 	  type="email"
 	  name="email"
 	  placeholder="john@example.com"
+	  className="border-slate-500 transition duration-150 ease-in-out hover:border-sky-600" 
 	  required
 	  value={email}
 	  onChange={handleEmailChange}
@@ -98,14 +99,14 @@ export default function RegistrationForm() {
       <div className="grid gap-2">
         <Label>Ticket Type</Label>
         <RadioGroup defaultValue="early-bird">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 transition duration-150 ease-in-out hover:text-sky-700">
             <RadioGroupItem value="vip" id="vip" />
-            <Label htmlFor="vip">Entrada Anticipada ($80)</Label>
+            <Label htmlFor="vip">Entrada Anticipada ($100)</Label>
           </div>
         </RadioGroup>
       </div>
 
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center space-x-2 transition duration-150 ease-in-out hover:text-sky-700">
         <Checkbox id="terms" required />
         <Label htmlFor="terms">Acepto los términos y condiciones del evento.</Label>
       </div>
@@ -113,7 +114,7 @@ export default function RegistrationForm() {
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full transition duration-500 hover:cursor-pointer hover:bg-blue-400 hover:text-white hover:shadow-md hover:shadow-indigo-200 border border-indigo-300"
+        className="w-full transition duration-500 ease-in-out hover:scale-y-105 hover:scale-x-103 hover:cursor-pointer hover:bg-sky-700 hover:text-white hover:shadow-md hover:shadow-sky-200 border border-slate-500"
       >
         {isSubmitting ? "Procesando..." : "Enviar"}
       </Button>

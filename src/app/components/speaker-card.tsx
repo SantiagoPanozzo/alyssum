@@ -12,10 +12,10 @@ interface SpeakerCardProps {
 }
 
 const topicColors = [
-  "border-red-700 text-red-700 hover:bg-red-100 hover:shadow-sm hover:shadow-red-200",
-  "border-green-700 text-green-700 hover:bg-green-100 hover:shadow-sm hover:shadow-green-200",
-  "border-blue-700 text-blue-700 hover:bg-blue-100 hover:shadow-sm hover:shadow-blue-200",
-  "border-yellow-700 text-yellow-700 hover:bg-yellow-100 hover:shadow-sm hover:shadow-yellow-200",
+  "border-pink-700 text-pink-700 hover:bg-pink-100 hover:shadow-sm hover:shadow-pink-200",
+  "border-emerald-600 text-emerald-600 hover:bg-emerald-100 hover:shadow-sm hover:shadow-emerald-200",
+  "border-sky-700 text-sky-700 hover:bg-sky-100 hover:shadow-sm hover:shadow-sky-200",
+  "border-amber-700 text-amber-700 hover:bg-amber-100 hover:shadow-sm hover:shadow-amber-200",
   "border-purple-700 text-purple-700 hover:bg-purple-100 hover:shadow-sm hover:shadow-purple-200",
 ]
 
@@ -25,7 +25,7 @@ export default function SpeakerCard({ name, role, image, topics }: SpeakerCardPr
   return (
     <>
       {/* Main Card */}
-      <div className="group relative rounded-lg bg-background transition-all hover:shadow-md hover:shadow-xl hover:shadow-indigo-200 border border-slate-300 flex flex-col">
+      <div className="group relative rounded-lg bg-background transition-all hover:shadow-md hover:shadow-xl hover:shadow-sky-200 border border-slate-300 flex flex-col">
         {/* Image container - maintaining aspect ratio without cropping */}
         <div className="w-full aspect-square relative">
           <Image
@@ -52,7 +52,7 @@ export default function SpeakerCard({ name, role, image, topics }: SpeakerCardPr
               variant="outline"
               size="lg"
               onClick={() => setIsOpen(true)}
-              className="rounded-full px-6 py-2 text-sm font-medium border border-slate-300 hover:shadow-lg hover:shadow-indigo-300 transition hover:bg-blue-400 hover:border-indigo-400 hover:text-white hover:cursor-pointer"
+              className="rounded-full px-6 py-2 text-sm font-medium border border-slate-400 hover:shadow-lg hover:shadow-sky-200 transition duration-300 ease-in-out hover:scale-110 hover:bg-sky-700 hover:border-sky-600 hover:text-white hover:cursor-pointer"
             >
               Ver
             </Button>
@@ -108,7 +108,7 @@ export default function SpeakerCard({ name, role, image, topics }: SpeakerCardPr
 		  variant="outline"
 		  size="lg"
 		  onClick={() => setIsOpen(false)}
-		  className="rounded-full px-6 py-2 text-sm font-medium border border-slate-300 hover:shadow-lg hover:shadow-blue-300 transition hover:bg-sky-700 hover:border-indigo-400 hover:text-white hover:cursor-pointer"
+		  className="rounded-full px-6 py-2 text-sm font-medium border border-slate-400 hover:shadow-lg hover:shadow-sky-200 transition hover:bg-sky-700 hover:border-indigo-400 hover:text-white hover:cursor-pointer"
 		>
 		  Cerrar
 		</Button>

@@ -32,32 +32,32 @@ return (
           </div>
           <nav className="hidden md:flex gap-6">
             <ScrollLink href="#about" className="text-sm font-medium transition-colors hover:text-blue-500">
-              <p className="hover:text-sky-700 transition">
+              <p className="hover:text-sky-600 transition">
                 Acerca del Evento
               </p>
             </ScrollLink>
             <ScrollLink href="#speakers" className="text-sm font-medium transition-colors hover:text-primary">
-              <p className="hover:text-sky-700 transition">
+              <p className="hover:text-sky-600 transition">
                 Speakers
               </p>
             </ScrollLink>
             <ScrollLink href="#schedule" className="text-sm font-medium transition-colors hover:text-primary">
-              <p className="hover:text-sky-700 transition">
+              <p className="hover:text-sky-600 transition">
                 Cronograma
               </p>
             </ScrollLink>
             <ScrollLink href="#venue" className="text-sm font-medium transition-colors hover:text-primary">
-              <p className="hover:text-sky-700 transition">
+              <p className="hover:text-sky-600 transition">
                 Lugar
               </p>
             </ScrollLink>
             <ScrollLink href="#faq" className="text-sm font-medium transition-colors hover:text-primary">
-              <p className="hover:text-sky-700 transition">
+              <p className="hover:text-sky-600 transition">
                 Preguntas Frecuentes
               </p>
             </ScrollLink>
           </nav>
-          <Button size="sm" variant="outline" asChild className="hover:text-sky-700 transition duration-300 hover:border-indigo-400 hover:cursor-pointer hover:bg-blue-400 hover:text-white">
+          <Button size="sm" variant="outline" asChild className="hover:text-sky-600 transition duration-300 ease-in-out border-slate-600 hover:scale-110 hover:border-sky-600 hover:cursor-pointer hover:bg-sky-700 hover:text-white">
             <ScrollLink href="#register">
               <p >
                 Inscribite Ya
@@ -83,7 +83,7 @@ return (
           <div className="container relative z-20 py-24 md:py-32 lg:py-40 px-4 md:px-6">
             <div className="grid gap-8 md:grid-cols-2 items-center">
               <div className="flex flex-col gap-4">
-                <div className="inline-flex items-center rounded-full border px-4 py-1.5 text-sm font-medium">
+                <div className="inline-flex items-center rounded-full border border-slate-600 px-4 py-1.5 text-sm font-medium">
                   <span className="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
                   9 de Julio de 2025
                 </div>
@@ -93,7 +93,7 @@ return (
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-[600px]">{eventDescription}</p>
                 <div className="flex flex-col sm:flex-row gap-3 mt-2">
-                  <Button size="lg" asChild className="transition duration-500 hover:cursor-pointer hover:bg-blue-400 hover:text-white hover:shadow-lg hover:shadow-indigo-200 border border-slate-800">
+                  <Button size="lg" asChild className="transition duration-500 ease-in-out hover:cursor-pointer hover:bg-sky-700 hover:text-white hover:shadow-lg hover:scale-105 hover:shadow-sky-200 border border-slate-800 hover:border-sky-600">
                     <ScrollLink href="#register">
                       <p className="transition">
                         Inscribite Ya
@@ -101,12 +101,12 @@ return (
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </ScrollLink>
                   </Button>
-                  <Button size="lg" variant="outline" asChild className="transition hover:bg-white hover:text-sky-700 transition duration-300 hover:shadow-lg hover:shadow-indigo-200 border border-slate-800">
+                  <Button size="lg" variant="outline" asChild className="hover:bg-white hover:text-sky-600 transition ease-in-out duration-300 hover:scale-105 hover:border-sky-600 hover:shadow-lg hover:shadow-sky-200 border border-slate-800">
                     <ScrollLink href="#schedule"><p>Ver Cronograma</p></ScrollLink>
                   </Button>
                 </div>
               </div>
-              <div className="bg-background/80 backdrop-blur-sm p-6 rounded-lg border">
+              <div className="bg-background/80 backdrop-blur-sm p-6 rounded-lg border border-slate-600">
                 <EventCountdown targetDate={eventDate} />
                 <div className="mt-6 space-y-4">
                   <div className="flex items-center gap-3">
@@ -156,7 +156,7 @@ return (
               </div>
 
               <div className="grid md:grid-cols-3 gap-8 mt-12">
-                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition duration-300 hover:shadow-xl hover:shadow-indigo-200 border border-slate-300">
+                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition ease-in-out duration-300 hover:scale-105 hover:shadow-xl hover:shadow-sky-200 border border-slate-300">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <Users className="h-6 w-6 text-primary" />
                   </div>
@@ -166,7 +166,7 @@ return (
                   </p>
                 </div>
 
-                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition duration-300 hover:shadow-xl hover:shadow-indigo-200 border border-slate-300">
+                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition ease-in-out duration-300 hover:scale-105 hover:shadow-xl hover:shadow-sky-200 border border-slate-300">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path
@@ -183,7 +183,7 @@ return (
                   </p>
                 </div>
 
-                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition duration-300 hover:shadow-xl hover:shadow-indigo-200 border border-slate-300">
+                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition ease-in-out duration-300 hover:scale-105 hover:shadow-xl hover:shadow-sky-200 border border-slate-300">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path
@@ -402,7 +402,7 @@ return (
 
           {/* Registration Section */}
           <section id="register" className="py-16 md:py-24">
-            <div className="container px-4 md:px-6">
+            <div className="container px-4 md:px-6 border-slate-500">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                   <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">Inscribite Ya</h2>
@@ -412,9 +412,9 @@ return (
                   </p>
 
                   <div className="space-y-6">
-                    <div className="bg-muted/50 p-6 rounded-lg border">
+                    <div className="bg-muted/50 p-6 rounded-lg border border-slate-500 duration-300 transition ease-in-out hover:scale-102">
                       <h3 className="text-xl font-bold mb-2">Entrada Anticipada</h3>
-                      <p className="text-3xl font-bold text-primary mb-2">$80</p>
+                      <p className="text-3xl font-bold text-primary mb-2">$100</p>
                       <p className="text-muted-foreground mb-4">Disponibles hasta el 30 de Junio.</p>
                       <ul className="space-y-2 mb-6">
                         <li className="flex items-center">
@@ -431,7 +431,7 @@ return (
                       </ul>
                     </div>
 
-                    <div className="bg-muted/50 p-6 rounded-lg border">
+                    <div className="bg-muted/50 p-6 rounded-lg border border-slate-500 duration-300 transition ease-in-out hover:scale-102">
                       <h3 className="text-xl font-bold mb-2">Descuento UCU</h3>
                       <p className="text-muted-foreground">
                         Si sos alumno de la UCU, ¡la entrada es gratis! Registrate y te enviamos un código de RedTickets
@@ -441,7 +441,7 @@ return (
                   </div>
                 </div>
 
-                <div className="bg-background p-8 rounded-lg border">
+                <div className="bg-background p-8 rounded-lg border border-slate-500">
                   <h3 className="text-2xl font-bold mb-6">Formulario de Registro</h3>
                   <RegistrationForm />
                 </div>
@@ -466,7 +466,7 @@ return (
 
               <div className="text-center mt-12">
                 <p className="text-muted-foreground mb-4">¿Tenés otra pregunta?</p>
-                <Button asChild className="transition duration-300 hover:shadow-lg hover:shadow-indigo-200 border border-slate-300">
+                <Button asChild className="transition duration-300 hover:shadow-lg hover:shadow-sky-200 hover:bg-sky-700 hover:text-white border border-slate-400">
                   <Link href="mailto:ucxmarketingdeserviciosycx@gmail.com" >Contactanos</Link>
                 </Button>
               </div>
@@ -513,42 +513,42 @@ return (
                 <ul className="space-y-2">
                   <li>
                     <ScrollLink href="#about" className="text-sm font-medium transition-colors hover:text-blue-500">
-                      <p className="hover:text-sky-700 transition">
+                      <p className="hover:text-sky-600 transition">
                         Acerca del Evento
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
                     <ScrollLink href="#speakers" className="text-sm font-medium transition-colors hover:text-primary">
-                      <p className="hover:text-sky-700 transition">
+                      <p className="hover:text-sky-600 transition">
                         Speakers
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
                     <ScrollLink href="#schedule" className="text-sm font-medium transition-colors hover:text-primary">
-                      <p className="hover:text-sky-700 transition">
+                      <p className="hover:text-sky-600 transition">
                         Cronograma
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
                     <ScrollLink href="#venue" className="text-sm font-medium transition-colors hover:text-primary">
-                      <p className="hover:text-sky-700 transition">
+                      <p className="hover:text-sky-600 transition">
                         Lugar
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
                     <ScrollLink href="#faq" className="text-sm font-medium transition-colors hover:text-primary">
-                      <p className="hover:text-sky-700 transition">
+                      <p className="hover:text-sky-600 transition">
                         Preguntas Frecuentes
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="#register" className="text-sm font-medium transition duration-300 hover:text-primary hover:cursor-pointer hover:bg-blue-400 hover:text-white ">
-                      <p className="hover:text-sky-700 transition ">
+                    <ScrollLink href="#register" className="text-sm border-slate-300 font-medium transition duration-300 hover:text-primary hover:cursor-pointer hover:bg-blue-400 hover:text-white ">
+                      <p className="hover:text-sky-600 transition ">
                         Inscribite Ya 
                       </p>
                     </ScrollLink>
