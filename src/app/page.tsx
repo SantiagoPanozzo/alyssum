@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Calendar, Clock, MapPin, Users, ArrowRight } from "lucide-react"
+import { Calendar, Clock, MapPin, Users, ArrowRight, ArrowDownNarrowWide } from "lucide-react"
 import { Button } from "./components/ui/button"
 import EventCountdown from "./components/event-countdown"
 import SpeakerCard from "./components/speaker-card"
@@ -31,27 +31,27 @@ return (
             {eventName}
           </div>
           <nav className="hidden md:flex gap-6">
-            <ScrollLink href="#about" className="text-sm font-medium transition-colors hover:text-blue-500">
+            <ScrollLink href="#about" className="text-sm font-medium transition-colors hover:text-sky-700">
               <p className="hover:text-sky-600 transition">
                 Acerca del Evento
               </p>
             </ScrollLink>
-            <ScrollLink href="#speakers" className="text-sm font-medium transition-colors hover:text-primary">
+            <ScrollLink href="#speakers" className="text-sm font-medium transition-colors hover:text-sky-700">
               <p className="hover:text-sky-600 transition">
                 Speakers
               </p>
             </ScrollLink>
-            <ScrollLink href="#schedule" className="text-sm font-medium transition-colors hover:text-primary">
+            <ScrollLink href="#schedule" className="text-sm font-medium transition-colors hover:text-sky-700">
               <p className="hover:text-sky-600 transition">
                 Cronograma
               </p>
             </ScrollLink>
-            <ScrollLink href="#venue" className="text-sm font-medium transition-colors hover:text-primary">
+            <ScrollLink href="#venue" className="text-sm font-medium transition-colors hover:text-sky-700">
               <p className="hover:text-sky-600 transition">
                 Lugar
               </p>
             </ScrollLink>
-            <ScrollLink href="#faq" className="text-sm font-medium transition-colors hover:text-primary">
+            <ScrollLink href="#faq" className="text-sm font-medium transition-colors hover:text-sky-700">
               <p className="hover:text-sky-600 transition">
                 Preguntas Frecuentes
               </p>
@@ -69,18 +69,18 @@ return (
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-background z-10" />
-          <div className="absolute inset-0">
+        <section className="h-screen">
+          <div className="absolute inset-0 w-screen left-0 ">
             <Image
               src="/bg.png"
               alt="Event background"
-              fill
-              className="object-cover opacity-30 absolute"
+	      fill
+              className="object-cover opacity-30 absolute w-screen left-0"
               priority
             />
           </div>
-          <div className="container relative z-20 py-24 md:py-32 lg:py-40 px-4 md:px-6">
+          <div className="relative inset-0 bg-gradient-to-r from-primary/20 to-background" />
+          <div className="container relative z-20 py-32 md:py-32 lg:py-40 px-4 md:px-6 top-10">
             <div className="grid gap-8 md:grid-cols-2 items-center">
               <div className="flex flex-col gap-4">
                 <div className="inline-flex items-center rounded-full border border-slate-600 px-4 py-1.5 text-sm font-medium">
@@ -141,6 +141,13 @@ return (
               </div>
             </div>
           </div>
+	  <div className="flex justify-center mt-20">
+	    <div className="p-3 border border-slate-600 rounded-full bg-background/70 backdrop-blur-sm shadow-md animate-bounce transition ease-in-out hover:scale-110 hover:bg-white hover:text-sky-600 hover:border-sky-700 hover:shadow-sky-200">
+              <ScrollLink href="#about" className="text-sm font-medium">
+	        <ArrowDownNarrowWide className="w-6 h-6 text-primary" />
+    	      </ScrollLink>
+  	    </div>
+	  </div>
         </section>
           {/* About Section */}
           <section id="about" className="py-16 md:py-24">
@@ -370,7 +377,7 @@ return (
               </div>
 
               <div className="grid md:grid-cols-2 gap-8 mt-12">
-                <div className="relative h-[400px] rounded-lg overflow-hidden">
+                <div className="relative h-[400px] rounded-lg overflow-hidden transition duration-300 ease-in-out hover:scale-102">
                   <Image src="/san-jose.png" alt="Lugar" fill className="object-cover" />
                 </div>
                 <div className="flex flex-col justify-center">
@@ -466,7 +473,7 @@ return (
 
               <div className="text-center mt-12">
                 <p className="text-muted-foreground mb-4">¿Tenés otra pregunta?</p>
-                <Button asChild className="transition duration-300 hover:shadow-lg hover:shadow-sky-200 hover:bg-sky-700 hover:text-white border border-slate-400">
+                <Button asChild className="transition duration-300 ease-in-out hover:shadow-lg hover:shadow-sky-200 hover:bg-sky-700 hover:text-white border border-slate-400 hover:scale-110">
                   <Link href="mailto:ucxmarketingdeserviciosycx@gmail.com" >Contactanos</Link>
                 </Button>
               </div>
@@ -512,42 +519,42 @@ return (
                 <h3 className="font-bold text-lg mb-4">Links</h3>
                 <ul className="space-y-2">
                   <li>
-                    <ScrollLink href="#about" className="text-sm font-medium transition-colors hover:text-blue-500">
+                    <ScrollLink href="#about" className="text-sm font-medium transition-colors hover:text-sky-700">
                       <p className="hover:text-sky-600 transition">
                         Acerca del Evento
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="#speakers" className="text-sm font-medium transition-colors hover:text-primary">
+                    <ScrollLink href="#speakers" className="text-sm font-medium transition-colors hover:text-sky-700">
                       <p className="hover:text-sky-600 transition">
                         Speakers
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="#schedule" className="text-sm font-medium transition-colors hover:text-primary">
+                    <ScrollLink href="#schedule" className="text-sm font-medium transition-colors hover:text-sky-700">
                       <p className="hover:text-sky-600 transition">
                         Cronograma
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="#venue" className="text-sm font-medium transition-colors hover:text-primary">
+                    <ScrollLink href="#venue" className="text-sm font-medium transition-colors hover:text-sky-700">
                       <p className="hover:text-sky-600 transition">
                         Lugar
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="#faq" className="text-sm font-medium transition-colors hover:text-primary">
+                    <ScrollLink href="#faq" className="text-sm font-medium transition-colors hover:text-sky-700">
                       <p className="hover:text-sky-600 transition">
                         Preguntas Frecuentes
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="#register" className="text-sm border-slate-300 font-medium transition duration-300 hover:text-primary hover:cursor-pointer hover:bg-blue-400 hover:text-white ">
+                    <ScrollLink href="#register" className="text-sm border-slate-300 font-medium transition duration-300 hover:text-primary hover:cursor-pointer hover:bg-sky-600 hover:text-white ">
                       <p className="hover:text-sky-600 transition ">
                         Inscribite Ya 
                       </p>
