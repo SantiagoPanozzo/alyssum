@@ -3,6 +3,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { Button } from './ui/button'
 import { motion, AnimatePresence } from 'framer-motion'
+import ModalPortal from './ui/modal-portal'
 
 interface SpeakerCardProps {
   name: string
@@ -63,6 +64,7 @@ export default function SpeakerCard({ name, role, image, topics }: SpeakerCardPr
       {/* Modal with animations */}
       <AnimatePresence>
         {isOpen && (
+	<ModalPortal>
           <motion.div 
             className="fixed inset-0 z-50 bg-opacity-40 flex items-center justify-center px-4 backdrop-blur-sm bg-white/10"
             initial={{ opacity: 0 }}
@@ -115,6 +117,7 @@ export default function SpeakerCard({ name, role, image, topics }: SpeakerCardPr
               </div>
             </motion.div>
           </motion.div>
+	  </ModalPortal>
         )}
       </AnimatePresence>
     </>
