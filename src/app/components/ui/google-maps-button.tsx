@@ -15,7 +15,7 @@ export default function GoogleMapsButton({ buttonText, mapUrl }: GoogleMapsButto
 
   return (
     <div>
-      <Button variant="outline" size="lg" onClick={() => setShowMap(true)} className="transition hover:text-sky-700 hover:cursor-pointer transition duration-300 hover:shadow-lg hover:shadow-indigo-300 border border-slate-300">
+      <Button variant="outline" size="lg" onClick={() => setShowMap(true)} className="transition hover:text-white hover:cursor-pointer transition duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-sky-200 hover:bg-sky-700 hover:border-sky-600 border border-slate-400">
         {buttonText}
       </Button>
 
@@ -48,7 +48,7 @@ export default function GoogleMapsButton({ buttonText, mapUrl }: GoogleMapsButto
                 variant="ghost"
                 size="icon"
                 onClick={() => setShowMap(false)}
-                className="absolute top-3 right-3 bg-white text-gray-800 hover:bg-gray-100 hover:text-red-600 rounded-full shadow-lg"
+                className="absolute top-3 transition duration-300 ease-in-out right-3 bg-white hover:bg-red-600 text-gray-800 hover:text-white hover:scale-110 rounded-full shadow-lg"
                 aria-label="Close map"
               >
                 <X className="w-5 h-5" />

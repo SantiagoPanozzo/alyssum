@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Calendar, Clock, MapPin, Users, ArrowRight } from "lucide-react"
+import { Calendar, Clock, MapPin, Users, ArrowRight, ArrowDownNarrowWide } from "lucide-react"
 import { Button } from "./components/ui/button"
 import EventCountdown from "./components/event-countdown"
 import SpeakerCard from "./components/speaker-card"
@@ -31,33 +31,33 @@ return (
             {eventName}
           </div>
           <nav className="hidden md:flex gap-6">
-            <ScrollLink href="#about" className="text-sm font-medium transition-colors hover:text-blue-500">
-              <p className="hover:text-sky-700 transition">
+            <ScrollLink href="#about" className="text-sm font-medium transition-colors hover:text-sky-700">
+              <p className="hover:text-sky-600 transition">
                 Acerca del Evento
               </p>
             </ScrollLink>
-            <ScrollLink href="#speakers" className="text-sm font-medium transition-colors hover:text-primary">
-              <p className="hover:text-sky-700 transition">
+            <ScrollLink href="#speakers" className="text-sm font-medium transition-colors hover:text-sky-700">
+              <p className="hover:text-sky-600 transition">
                 Speakers
               </p>
             </ScrollLink>
-            <ScrollLink href="#schedule" className="text-sm font-medium transition-colors hover:text-primary">
-              <p className="hover:text-sky-700 transition">
+            <ScrollLink href="#schedule" className="text-sm font-medium transition-colors hover:text-sky-700">
+              <p className="hover:text-sky-600 transition">
                 Cronograma
               </p>
             </ScrollLink>
-            <ScrollLink href="#venue" className="text-sm font-medium transition-colors hover:text-primary">
-              <p className="hover:text-sky-700 transition">
+            <ScrollLink href="#venue" className="text-sm font-medium transition-colors hover:text-sky-700">
+              <p className="hover:text-sky-600 transition">
                 Lugar
               </p>
             </ScrollLink>
-            <ScrollLink href="#faq" className="text-sm font-medium transition-colors hover:text-primary">
-              <p className="hover:text-sky-700 transition">
+            <ScrollLink href="#faq" className="text-sm font-medium transition-colors hover:text-sky-700">
+              <p className="hover:text-sky-600 transition">
                 Preguntas Frecuentes
               </p>
             </ScrollLink>
           </nav>
-          <Button size="sm" variant="outline" asChild className="hover:text-sky-700 transition duration-300 hover:border-indigo-400 hover:cursor-pointer hover:bg-blue-400 hover:text-white">
+          <Button size="sm" variant="outline" asChild className="hover:text-sky-600 transition duration-300 ease-in-out border-slate-600 hover:scale-110 hover:border-sky-600 hover:cursor-pointer hover:bg-sky-700 hover:text-white">
             <ScrollLink href="#register">
               <p >
                 Inscribite Ya
@@ -68,46 +68,45 @@ return (
       </header>
 
       <main className="flex-1">
+	<div className="fixed inset-0 w-screen h-screen z-0 pointer-events-none">
+	  <Image
+	      src="/bg.png"
+	      alt="Event background"
+	      fill
+	      className="object-cover opacity-30"
+	      priority
+	  />
+	</div>
         {/* Hero Section */}
-        <section className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-background z-10" />
-          <div className="absolute inset-0">
-            <Image
-              src="/bg.png"
-              alt="Event background"
-              fill
-              className="object-cover opacity-30 absolute"
-              priority
-            />
-          </div>
-          <div className="container relative z-20 py-24 md:py-32 lg:py-40 px-4 md:px-6">
-            <div className="grid gap-8 md:grid-cols-2 items-center">
-              <div className="flex flex-col gap-4">
-                <div className="inline-flex items-center rounded-full border px-4 py-1.5 text-sm font-medium">
-                  <span className="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
-                  9 de Julio de 2025
-                </div>
-                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                  {eventName}
-                  <span className="block text-primary">{eventTagline}</span>
-                </h1>
-                <p className="text-xl text-muted-foreground max-w-[600px]">{eventDescription}</p>
-                <div className="flex flex-col sm:flex-row gap-3 mt-2">
-                  <Button size="lg" asChild className="transition duration-500 hover:cursor-pointer hover:bg-blue-400 hover:text-white hover:shadow-lg hover:shadow-indigo-200 border border-slate-800">
-                    <ScrollLink href="#register">
-                      <p className="transition">
-                        Inscribite Ya
-                      </p>
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </ScrollLink>
-                  </Button>
-                  <Button size="lg" variant="outline" asChild className="transition hover:bg-white hover:text-sky-700 transition duration-300 hover:shadow-lg hover:shadow-indigo-200 border border-slate-800">
-                    <ScrollLink href="#schedule"><p>Ver Cronograma</p></ScrollLink>
-                  </Button>
-                </div>
-              </div>
-              <div className="bg-background/80 backdrop-blur-sm p-6 rounded-lg border">
-                <EventCountdown targetDate={eventDate} />
+	<section className="w-full min-h-screen overflow-hidden">
+	  <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 mt-20 bg-transparent">
+	    <div className="grid gap-12 lg:gap-16 grid-cols-1 md:grid-cols-2 items-start">
+	      <div className="flex flex-col gap-4">
+		<div className="inline-flex items-center rounded-full border border-slate-600 px-4 py-1.5 text-sm font-medium">
+		  <span className="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
+		  9 de Julio de 2025
+		</div>
+		<h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+		  {eventName}
+		  <span className="block text-primary">{eventTagline}</span>
+		</h1>
+		<p className="text-xl text-muted-foreground max-w-[600px]">{eventDescription}</p>
+		<div className="flex flex-col sm:flex-row gap-3 mt-2">
+		  <Button size="lg" asChild className="transition duration-500 ease-in-out hover:cursor-pointer hover:bg-sky-700 hover:text-white hover:shadow-lg hover:scale-105 hover:shadow-sky-200 border border-slate-800 hover:border-sky-600">
+		    <ScrollLink href="#register">
+		      <p>Inscribite Ya</p>
+		      <ArrowRight className="ml-2 h-4 w-4" />
+		    </ScrollLink>
+		  </Button>
+		  <Button size="lg" variant="outline" asChild className="hover:bg-white hover:text-sky-600 transition ease-in-out duration-300 hover:scale-105 hover:border-sky-600 hover:shadow-lg hover:shadow-sky-200 border border-slate-800">
+		    <ScrollLink href="#schedule"><p>Ver Cronograma</p></ScrollLink>
+		  </Button>
+		</div>
+	      </div>
+	      <div className="flex flex-col justify-center bg-background/80 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-slate-600 h-full w-full transition duration-400 ease-in-out hover:scale-105">
+	        <div className="flex-1 flex items-center justify-center">
+		  <EventCountdown targetDate={eventDate} />
+		</div>
                 <div className="mt-6 space-y-4">
                   <div className="flex items-center gap-3">
                     <Calendar className="h-5 w-5 text-primary" />
@@ -141,9 +140,16 @@ return (
               </div>
             </div>
           </div>
+	  <div className="flex justify-center mt-8">
+	    <ScrollLink href="#about">
+	      <div className="p-3 border border-slate-600 rounded-full bg-background/70 backdrop-blur-sm shadow-md animate-bounce transition ease-in-out hover:scale-110 hover:bg-white hover:text-sky-600 hover:border-sky-700 hover:shadow-sky-200">
+		  <ArrowDownNarrowWide className="w-6 h-6 text-primary" />
+	      </div>
+	    </ScrollLink>
+	  </div>
         </section>
           {/* About Section */}
-          <section id="about" className="py-16 md:py-24">
+          <section id="about" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Acerca del Evento</h2>
@@ -156,7 +162,7 @@ return (
               </div>
 
               <div className="grid md:grid-cols-3 gap-8 mt-12">
-                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition duration-300 hover:shadow-xl hover:shadow-indigo-200 border border-slate-300">
+                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition ease-in-out duration-300 hover:scale-105 hover:shadow-xl hover:shadow-sky-200 border border-slate-300">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <Users className="h-6 w-6 text-primary" />
                   </div>
@@ -166,7 +172,7 @@ return (
                   </p>
                 </div>
 
-                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition duration-300 hover:shadow-xl hover:shadow-indigo-200 border border-slate-300">
+                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition ease-in-out duration-300 hover:scale-105 hover:shadow-xl hover:shadow-sky-200 border border-slate-300">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path
@@ -183,7 +189,7 @@ return (
                   </p>
                 </div>
 
-                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition duration-300 hover:shadow-xl hover:shadow-indigo-200 border border-slate-300">
+                <div className="bg-muted/50 p-6 rounded-lg shadow-xl transition ease-in-out duration-300 hover:scale-105 hover:shadow-xl hover:shadow-sky-200 border border-slate-300">
                   <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                     <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path
@@ -205,7 +211,7 @@ return (
           </section>
 
           {/* Speakers Section */}
-          <section id="speakers" className="py-16 md:py-24 bg-muted/30">
+          <section id="speakers" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Speakers Invitados</h2>
@@ -236,7 +242,7 @@ return (
 		      
 		      Más de 15 de años de trabajo en Marketing en diferentes empresas liderando equipos y comprometida con el logro de resultados.`}
                     image="/analiaarbuet.jpg"
-                    topics={["Marketing"]}
+                    topics={["Marketing", "Docente", "Media & Communication"]}
                 />
                 <SpeakerCard
                     name="Jerónimo Sánchez Varela "
@@ -244,7 +250,7 @@ return (
 
 		    Café, pasta, dulce de leche`}
                     image="/momo.jpeg"
-                    topics={["Marketing"]}
+                    topics={["Profesional", "Emprendedor", "Customer Experience"]}
                 />
                 <SpeakerCard
                     name="Juan Cosidó"
@@ -254,14 +260,14 @@ return (
 
 		      Consultor, docente de UCU y speaker, lleva más de 20 años trabajando en la intersección entre marketing, experiencia de cliente y estrategia comercial, ayudando a empresas y organizaciones a conectar con sus clientes de manera más humana, efectiva y sostenible.`}
                     image="/juancosido.jpg"
-                    topics={["Marketing de Servicios", "Customer Experience"]}
+                    topics={["Marketing de Servicios", "Docente", "Customer Experience"]}
                 />
               </div>
             </div>
           </section>
 
           {/* Schedule Section */}
-          <section id="schedule" className="py-16 md:py-24">
+          <section id="schedule" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Cronograma del Evento</h2>
@@ -357,7 +363,7 @@ return (
           </section>
 
           {/* Venue Section */}
-          <section id="venue" className="py-16 md:py-24 bg-muted/30">
+          <section id="venue" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Lugar</h2>
@@ -370,7 +376,7 @@ return (
               </div>
 
               <div className="grid md:grid-cols-2 gap-8 mt-12">
-                <div className="relative h-[400px] rounded-lg overflow-hidden">
+                <div className="relative h-[400px] rounded-lg overflow-hidden transition duration-300 ease-in-out hover:scale-102">
                   <Image src="/san-jose.png" alt="Lugar" fill className="object-cover" />
                 </div>
                 <div className="flex flex-col justify-center">
@@ -401,8 +407,8 @@ return (
           </section>
 
           {/* Registration Section */}
-          <section id="register" className="py-16 md:py-24">
-            <div className="container px-4 md:px-6">
+          <section id="register" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
+            <div className="container px-4 md:px-6 border-slate-500">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                   <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">Inscribite Ya</h2>
@@ -412,9 +418,9 @@ return (
                   </p>
 
                   <div className="space-y-6">
-                    <div className="bg-muted/50 p-6 rounded-lg border">
+                    <div className="bg-muted/50 p-6 rounded-lg border border-slate-500 duration-300 transition ease-in-out hover:scale-102">
                       <h3 className="text-xl font-bold mb-2">Entrada Anticipada</h3>
-                      <p className="text-3xl font-bold text-primary mb-2">$80</p>
+                      <p className="text-3xl font-bold text-primary mb-2">$100</p>
                       <p className="text-muted-foreground mb-4">Disponibles hasta el 30 de Junio.</p>
                       <ul className="space-y-2 mb-6">
                         <li className="flex items-center">
@@ -431,7 +437,7 @@ return (
                       </ul>
                     </div>
 
-                    <div className="bg-muted/50 p-6 rounded-lg border">
+                    <div className="bg-muted/50 p-6 rounded-lg border border-slate-500 duration-300 transition ease-in-out hover:scale-102">
                       <h3 className="text-xl font-bold mb-2">Descuento UCU</h3>
                       <p className="text-muted-foreground">
                         Si sos alumno de la UCU, ¡la entrada es gratis! Registrate y te enviamos un código de RedTickets
@@ -441,7 +447,7 @@ return (
                   </div>
                 </div>
 
-                <div className="bg-background p-8 rounded-lg border">
+                <div className="bg-background p-8 rounded-lg border border-slate-500">
                   <h3 className="text-2xl font-bold mb-6">Formulario de Registro</h3>
                   <RegistrationForm />
                 </div>
@@ -450,7 +456,7 @@ return (
           </section>
 
           {/* FAQ Section */}
-          <section id="faq" className="py-16 md:py-24 bg-muted/30">
+          <section id="faq" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Preguntas Frecuentas</h2>
@@ -466,7 +472,7 @@ return (
 
               <div className="text-center mt-12">
                 <p className="text-muted-foreground mb-4">¿Tenés otra pregunta?</p>
-                <Button asChild className="transition duration-300 hover:shadow-lg hover:shadow-indigo-200 border border-slate-300">
+                <Button asChild className="transition duration-300 ease-in-out hover:shadow-lg hover:shadow-sky-200 hover:bg-sky-700 hover:text-white border border-slate-400 hover:scale-110">
                   <Link href="mailto:ucxmarketingdeserviciosycx@gmail.com" >Contactanos</Link>
                 </Button>
               </div>
@@ -474,7 +480,7 @@ return (
           </section>
 
           {/* Sponsors Section */}
-          <section className="py-16 md:py-24">
+          <section id="sponsors" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Nuestros Patrocinadores</h2>
@@ -496,9 +502,9 @@ return (
         </main>
 
         {/* Footer */}
-        <footer className="bg-muted py-12">
-          <div className="container px-4 md:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <footer className="bg-white py-12 flex flex-col items-center z-20 w-screen">
+	  <div className="container max-w-6xl px-4 md:px-6 mx-auto">
+	    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
                 <div className="flex items-center gap-2 font-bold text-xl mb-4">
                   {eventName}
@@ -506,66 +512,49 @@ return (
                 <p className="text-muted-foreground mb-4">
                   El evento más importante de marketing de servicios para innovadores, creadores, y líderes.
                 </p>
-                <div className="flex space-x-4">
-                  <a href="#" className="text-muted-foreground hover:text-primary">
-                    <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-                    </svg>
-                  </a>
-                  <a href="#" className="text-muted-foreground hover:text-primary">
-                    <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
-                    </svg>
-                  </a>
-                  <a href="#" className="text-muted-foreground hover:text-primary">
-                    <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-                    </svg>
-                  </a>
-                </div>
               </div>
 
               <div>
                 <h3 className="font-bold text-lg mb-4">Links</h3>
                 <ul className="space-y-2">
                   <li>
-                    <ScrollLink href="#about" className="text-sm font-medium transition-colors hover:text-blue-500">
-                      <p className="hover:text-sky-700 transition">
+                    <ScrollLink href="#about" className="text-sm font-medium transition-colors hover:text-sky-700">
+                      <p className="hover:text-sky-600 transition">
                         Acerca del Evento
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="#speakers" className="text-sm font-medium transition-colors hover:text-primary">
-                      <p className="hover:text-sky-700 transition">
+                    <ScrollLink href="#speakers" className="text-sm font-medium transition-colors hover:text-sky-700">
+                      <p className="hover:text-sky-600 transition">
                         Speakers
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="#schedule" className="text-sm font-medium transition-colors hover:text-primary">
-                      <p className="hover:text-sky-700 transition">
+                    <ScrollLink href="#schedule" className="text-sm font-medium transition-colors hover:text-sky-700">
+                      <p className="hover:text-sky-600 transition">
                         Cronograma
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="#venue" className="text-sm font-medium transition-colors hover:text-primary">
-                      <p className="hover:text-sky-700 transition">
+                    <ScrollLink href="#venue" className="text-sm font-medium transition-colors hover:text-sky-700">
+                      <p className="hover:text-sky-600 transition">
                         Lugar
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="#faq" className="text-sm font-medium transition-colors hover:text-primary">
-                      <p className="hover:text-sky-700 transition">
+                    <ScrollLink href="#faq" className="text-sm font-medium transition-colors hover:text-sky-700">
+                      <p className="hover:text-sky-600 transition">
                         Preguntas Frecuentes
                       </p>
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="#register" className="text-sm font-medium transition duration-300 hover:text-primary hover:cursor-pointer hover:bg-blue-400 hover:text-white ">
-                      <p className="hover:text-sky-700 transition ">
+                    <ScrollLink href="#register" className="text-sm border-slate-300 font-medium transition duration-300 hover:text-primary hover:cursor-pointer hover:bg-sky-600 hover:text-white ">
+                      <p className="hover:text-sky-600 transition ">
                         Inscribite Ya 
                       </p>
                     </ScrollLink>
