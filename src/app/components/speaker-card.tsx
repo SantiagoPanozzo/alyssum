@@ -71,14 +71,13 @@ export default function SpeakerCard({ name, role, image, topics }: SpeakerCardPr
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <motion.div 
-              className="bg-white rounded-2xl shadow-lg w-full h-auto min-h-[400px] max-h-[90vh] flex flex-col md:flex-row overflow-hidden" 
-              style={{ width: '700px', minWidth: '650px' }}
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ type: 'spring', stiffness: 200, damping: 20 }}
-            >
+	    <motion.div 
+		className="bg-white rounded-2xl shadow-lg w-full max-w-4xl h-auto max-h-[90vh] flex flex-col md:flex-row overflow-hidden"
+		initial={{ scale: 0.9, opacity: 0 }}
+		animate={{ scale: 1, opacity: 1 }}
+		exit={{ scale: 0.9, opacity: 0 }}
+		transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+	    >
               {/* Fixed size image container with minimum dimensions */}
               <div className="relative w-full md:w-72 min-w-[240px] h-64 md:h-auto min-h-[300px] flex-shrink-0">
                 <Image
