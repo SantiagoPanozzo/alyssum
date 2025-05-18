@@ -68,46 +68,45 @@ return (
       </header>
 
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="h-screen">
-          <div className="absolute inset-0 w-screen left-0 ">
-            <Image
-              src="/bg.png"
-              alt="Event background"
+	<div className="fixed inset-0 w-screen h-screen z-0 pointer-events-none">
+	  <Image
+	      src="/bg.png"
+	      alt="Event background"
 	      fill
-              className="object-cover opacity-30 absolute w-screen left-0"
-              priority
-            />
-          </div>
-          <div className="relative inset-0 bg-gradient-to-r from-primary/20 to-background" />
-          <div className="container relative z-20 py-32 md:py-32 lg:py-40 px-4 md:px-6 top-10">
-            <div className="grid gap-8 md:grid-cols-2 items-center">
-              <div className="flex flex-col gap-4">
-                <div className="inline-flex items-center rounded-full border border-slate-600 px-4 py-1.5 text-sm font-medium">
-                  <span className="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
-                  9 de Julio de 2025
-                </div>
-                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                  {eventName}
-                  <span className="block text-primary">{eventTagline}</span>
-                </h1>
-                <p className="text-xl text-muted-foreground max-w-[600px]">{eventDescription}</p>
-                <div className="flex flex-col sm:flex-row gap-3 mt-2">
-                  <Button size="lg" asChild className="transition duration-500 ease-in-out hover:cursor-pointer hover:bg-sky-700 hover:text-white hover:shadow-lg hover:scale-105 hover:shadow-sky-200 border border-slate-800 hover:border-sky-600">
-                    <ScrollLink href="#register">
-                      <p className="transition">
-                        Inscribite Ya
-                      </p>
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </ScrollLink>
-                  </Button>
-                  <Button size="lg" variant="outline" asChild className="hover:bg-white hover:text-sky-600 transition ease-in-out duration-300 hover:scale-105 hover:border-sky-600 hover:shadow-lg hover:shadow-sky-200 border border-slate-800">
-                    <ScrollLink href="#schedule"><p>Ver Cronograma</p></ScrollLink>
-                  </Button>
-                </div>
-              </div>
-              <div className="bg-background/80 backdrop-blur-sm p-6 rounded-lg border border-slate-600">
-                <EventCountdown targetDate={eventDate} />
+	      className="object-cover opacity-30"
+	      priority
+	  />
+	</div>
+        {/* Hero Section */}
+	<section className="w-full min-h-screen overflow-hidden">
+	  <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 mt-20 bg-transparent">
+	    <div className="grid gap-12 lg:gap-16 grid-cols-1 md:grid-cols-2 items-start">
+	      <div className="flex flex-col gap-4">
+		<div className="inline-flex items-center rounded-full border border-slate-600 px-4 py-1.5 text-sm font-medium">
+		  <span className="flex h-2 w-2 rounded-full bg-primary mr-2"></span>
+		  9 de Julio de 2025
+		</div>
+		<h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+		  {eventName}
+		  <span className="block text-primary">{eventTagline}</span>
+		</h1>
+		<p className="text-xl text-muted-foreground max-w-[600px]">{eventDescription}</p>
+		<div className="flex flex-col sm:flex-row gap-3 mt-2">
+		  <Button size="lg" asChild className="transition duration-500 ease-in-out hover:cursor-pointer hover:bg-sky-700 hover:text-white hover:shadow-lg hover:scale-105 hover:shadow-sky-200 border border-slate-800 hover:border-sky-600">
+		    <ScrollLink href="#register">
+		      <p>Inscribite Ya</p>
+		      <ArrowRight className="ml-2 h-4 w-4" />
+		    </ScrollLink>
+		  </Button>
+		  <Button size="lg" variant="outline" asChild className="hover:bg-white hover:text-sky-600 transition ease-in-out duration-300 hover:scale-105 hover:border-sky-600 hover:shadow-lg hover:shadow-sky-200 border border-slate-800">
+		    <ScrollLink href="#schedule"><p>Ver Cronograma</p></ScrollLink>
+		  </Button>
+		</div>
+	      </div>
+	      <div className="flex flex-col justify-center bg-background/80 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-slate-600 h-full w-full transition duration-400 ease-in-out hover:scale-105">
+	        <div className="flex-1 flex items-center justify-center">
+		  <EventCountdown targetDate={eventDate} />
+		</div>
                 <div className="mt-6 space-y-4">
                   <div className="flex items-center gap-3">
                     <Calendar className="h-5 w-5 text-primary" />
@@ -141,16 +140,16 @@ return (
               </div>
             </div>
           </div>
-	  <div className="flex justify-center mt-20">
-	    <div className="p-3 border border-slate-600 rounded-full bg-background/70 backdrop-blur-sm shadow-md animate-bounce transition ease-in-out hover:scale-110 hover:bg-white hover:text-sky-600 hover:border-sky-700 hover:shadow-sky-200">
-              <ScrollLink href="#about" className="text-sm font-medium">
-	        <ArrowDownNarrowWide className="w-6 h-6 text-primary" />
-    	      </ScrollLink>
-  	    </div>
+	  <div className="flex justify-center mt-8">
+	    <ScrollLink href="#about">
+	      <div className="p-3 border border-slate-600 rounded-full bg-background/70 backdrop-blur-sm shadow-md animate-bounce transition ease-in-out hover:scale-110 hover:bg-white hover:text-sky-600 hover:border-sky-700 hover:shadow-sky-200">
+		  <ArrowDownNarrowWide className="w-6 h-6 text-primary" />
+	      </div>
+	    </ScrollLink>
 	  </div>
         </section>
           {/* About Section */}
-          <section id="about" className="py-16 md:py-24">
+          <section id="about" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Acerca del Evento</h2>
@@ -212,7 +211,7 @@ return (
           </section>
 
           {/* Speakers Section */}
-          <section id="speakers" className="py-16 md:py-24 bg-muted/30">
+          <section id="speakers" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Speakers Invitados</h2>
@@ -268,7 +267,7 @@ return (
           </section>
 
           {/* Schedule Section */}
-          <section id="schedule" className="py-16 md:py-24">
+          <section id="schedule" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Cronograma del Evento</h2>
@@ -364,7 +363,7 @@ return (
           </section>
 
           {/* Venue Section */}
-          <section id="venue" className="py-16 md:py-24 bg-muted/30">
+          <section id="venue" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Lugar</h2>
@@ -408,7 +407,7 @@ return (
           </section>
 
           {/* Registration Section */}
-          <section id="register" className="py-16 md:py-24">
+          <section id="register" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6 border-slate-500">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
@@ -457,7 +456,7 @@ return (
           </section>
 
           {/* FAQ Section */}
-          <section id="faq" className="py-16 md:py-24 bg-muted/30">
+          <section id="faq" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Preguntas Frecuentas</h2>
@@ -481,7 +480,7 @@ return (
           </section>
 
           {/* Sponsors Section */}
-          <section className="py-16 md:py-24">
+          <section id="sponsors" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Nuestros Patrocinadores</h2>
@@ -503,9 +502,9 @@ return (
         </main>
 
         {/* Footer */}
-        <footer className="bg-muted py-12">
-          <div className="container px-4 md:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <footer className="bg-white py-12 flex flex-col items-center z-20 w-screen">
+	  <div className="container max-w-6xl px-4 md:px-6 mx-auto">
+	    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
                 <div className="flex items-center gap-2 font-bold text-xl mb-4">
                   {eventName}
