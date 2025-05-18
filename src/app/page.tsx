@@ -224,41 +224,49 @@ return (
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
                 <SpeakerCard
                     name="Santiago Fernandez"
-                    role={`Santiago Fernández Sapelli, 43 años, padre de Joaco de 10. Divertido, simpático y con un lado ñoño fanático de la tecnología y la automatización.
+                    role={`
+			Santiago Fernández Sapelli, 43 años, padre de Joaco de 10. Divertido, simpático y con un lado ñoño fanático de la tecnología y la automatización.
 
-		      Se formó en Gerencia de Empresas en la Universidad ORT, donde desarrolló su veta de marketinero y vendedor nato, con tanta labia que lo siguen llamando como speaker desde varios países.
+			Se formó en Gerencia de Empresas en la Universidad ORT, donde desarrolló su veta de marketinero y vendedor nato, con tanta labia que lo siguen llamando como speaker desde varios países.
 
-		      ¿Tímido? Para nada: ha dado conferencias frente a más de 600 personas. Hoy dirige Orange Attitude – Consultancy & Digital Agency, la agencia que fundó a los 21 años y con la que viene impulsando marcas y mejorando la experiencia de clientes desde hace más de dos décadas.`}
+			¿Tímido? Para nada: ha dado conferencias frente a más de 600 personas. Hoy dirige Orange Attitude – Consultancy & Digital Agency, la agencia que fundó a los 21 años y con la que viene impulsando marcas y mejorando la experiencia de clientes desde hace más de dos décadas.
+			`}
                     image="/santiagofernandez.jpg"
                     topics={["Marketing", "Sales Automation", "Lead Scoring", "IA y Chatbots"]}
                 />
                 <SpeakerCard
                     name="Analía Arbuet"
-                    role={`Lic. Analía Arbuet.
+                    role={`
+			Apasionada por el marketing, la lectura y las buenas estrategias.
 
-		      Apasionada por el marketing y la lectura.
+			Analía Arbuet lleva más de 15 años liderando equipos y proyectos en el mundo del marketing. Le encanta conectar marcas con personas, y se destaca por su enfoque planificado, orientado a resultados y con una mirada humana del negocio.
 
-		      Me encanta conectar marcas con personas y me apasiona la planificación y la estrategia.
-		      
-		      Más de 15 de años de trabajo en Marketing en diferentes empresas liderando equipos y comprometida con el logro de resultados.`}
+			Licenciada en Marketing, combina experiencia, sensibilidad y una fuerte vocación por generar impacto real.
+			`}
                     image="/analiaarbuet.jpg"
                     topics={["Marketing", "Docente", "Media & Communication"]}
                 />
                 <SpeakerCard
                     name="Jerónimo Sánchez Varela "
-                    role={`Padre, emprendedor y muy soñador
+                    role={`
+			Padre, emprendedor y soñador.
 
-		    Café, pasta, dulce de leche`}
+			Jerónimo Sánchez Varela es un apasionado de la gastronomía y la creación de experiencias memorables. Con una marcada sensibilidad por los detalles y un fuerte espíritu creativo, ha desarrollado diversos proyectos en el mundo de la comida, siempre con foco en la calidad, la autenticidad y el disfrute.
+
+			Su energía emprendedora se combina con una profunda vocación por hacer que las cosas pasen.
+			`}
                     image="/momo.jpeg"
                     topics={["Profesional", "Emprendedor", "Customer Experience"]}
                 />
                 <SpeakerCard
                     name="Juan Cosidó"
-                    role={`Padre de Danielle y enamorado de Julia Helena.
+                    role={`
+			Padre de Danielle y enamorado de Julia Helena.
 
-		      Juan Cosidó es un apasionado por las ideas que transforman y por las personas que las hacen realidad.
+			Juan Cosidó es un apasionado por las ideas que transforman y por las personas que las hacen realidad.
 
-		      Consultor, docente de UCU y speaker, lleva más de 20 años trabajando en la intersección entre marketing, experiencia de cliente y estrategia comercial, ayudando a empresas y organizaciones a conectar con sus clientes de manera más humana, efectiva y sostenible.`}
+			Consultor, docente de UCU y speaker, lleva más de 20 años trabajando en la intersección entre marketing, experiencia de cliente y estrategia comercial, ayudando a empresas y organizaciones a conectar con sus clientes de manera más humana, efectiva y sostenible.
+			`}
                     image="/juancosido.jpg"
                     topics={["Marketing de Servicios", "Docente", "Customer Experience"]}
                 />
