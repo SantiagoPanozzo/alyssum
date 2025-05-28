@@ -97,7 +97,7 @@ export default function RegistrationForm() {
       </div>
 
       <div className="grid gap-2">
-        <Label>Ticket Type</Label>
+        <Label>Tipo de Entrada</Label>
         <RadioGroup defaultValue="early-bird">
           <div className="flex items-center space-x-2 transition duration-150 ease-in-out hover:text-sky-700">
             <RadioGroupItem value="vip" id="vip" />
@@ -106,10 +106,12 @@ export default function RegistrationForm() {
         </RadioGroup>
       </div>
 
+      {/*
       <div className="flex items-center space-x-2 transition duration-150 ease-in-out hover:text-sky-700">
         <Checkbox id="terms" required />
         <Label htmlFor="terms">Acepto los términos y condiciones del evento.</Label>
       </div>
+        */}
 
       <Button
         type="submit"
