@@ -7,7 +7,7 @@ import SpeakerCard from "./components/speaker-card"
 import ScheduleItem from "./components/schedule-item"
 import FAQAccordion from "./components/faq-accordion"
 import RegistrationForm from "./components/registration-form"
-import HorizontalImageScroller from "./components/horizontalImageScroller";
+// import HorizontalImageScroller from "./components/horizontalImageScroller";
 import GoogleMapsButton from "./components/ui/google-maps-button"
 import { ScrollLink } from "./components/ui/scroll-link"
 

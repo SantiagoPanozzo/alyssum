@@ -5,7 +5,7 @@ import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Label } from "./ui/label"
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group"
-import { Checkbox } from "./ui/checkbox"
+//import { Checkbox } from "./ui/checkbox"
 
 export default function RegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
