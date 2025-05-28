@@ -3,7 +3,7 @@ import { Clock, MapPin, User } from "lucide-react"
 interface ScheduleItemProps {
   time: string
   title: string
-  speaker: string
+  speaker?: string
   location: string
 }
 
@@ -17,10 +17,12 @@ export default function ScheduleItem({ time, title, speaker, location }: Schedul
       <div className="md:w-3/4">
         <h4 className="font-bold text-lg">{title}</h4>
         <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 mt-2 text-sm text-muted-foreground">
-          <div className="flex items-center">
-            <User className="h-4 w-4 mr-1 flex-shrink-0" />
-            {speaker}
-          </div>
+          {speaker && (
+            <div className="flex items-center">
+              <User className="h-4 w-4 mr-1 flex-shrink-0" />
+              {speaker}
+            </div>
+          )}
           <div className="flex items-center">
             <MapPin className="h-4 w-4 mr-1 flex-shrink-0" />
             {location}
@@ -30,4 +32,3 @@ export default function ScheduleItem({ time, title, speaker, location }: Schedul
     </div>
   )
 }
-
