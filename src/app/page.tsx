@@ -230,6 +230,10 @@ return (
 			Se formó en Gerencia de Empresas en la Universidad ORT, donde desarrolló su veta de marketinero y vendedor nato, con tanta labia que lo siguen llamando como speaker desde varios países.
 
 			¿Tímido? Para nada: ha dado conferencias frente a más de 600 personas. Hoy dirige Orange Attitude – Consultancy & Digital Agency, la agencia que fundó a los 21 años y con la que viene impulsando marcas y mejorando la experiencia de clientes desde hace más de dos décadas.
+
+      La charla será una experiencia divertida e interactiva, pensada para inspirar y mostrar cómo la tecnología —y especialmente la inteligencia artificial— nos permite personalizar la experiencia del cliente a lo largo de todo su recorrido, desde el primer contacto hasta la conversión. Exploraremos cómo adaptar mensajes, canales y propuestas en tiempo real según las preferencias, el contexto y el comportamiento de cada usuario.
+
+      Vamos a conversar sobre cómo generar un marketing uno a uno, dejando atrás los enfoques genéricos para diseñar experiencias más humanas, relevantes y memorables. Hablaremos de herramientas concretas y casos reales que demuestran cómo la tecnología aplicada con inteligencia puede marcar la diferencia en cada etapa del customer journey.
 			`}
                     image="/santiagofernandez.jpg"
                     topics={["Marketing", "Sales Automation", "Lead Scoring", "IA y Chatbots"]}
@@ -242,12 +246,14 @@ return (
 			Analía Arbuet lleva más de 15 años liderando equipos y proyectos en el mundo del marketing. Le encanta conectar marcas con personas, y se destaca por su enfoque planificado, orientado a resultados y con una mirada humana del negocio.
 
 			Licenciada en Marketing, combina experiencia, sensibilidad y una fuerte vocación por generar impacto real.
+
+      Esta charla trata del marketing de servicios con un foco en el aspecto humano de la atención al cliente, tomando ventaja de las nuevas tecnologías y la inteligencia artificial. Se hablará de la importancia de la atención humana y de poner siempre al cliente en el centro de las definiciones vinculadas a los servicios. Podrás aprender sobre las ventajas y desafíos que implica revalorizar la comunicación humana como pilar del marketing.
 			`}
                     image="/analiaarbuet.jpg"
                     topics={["Marketing", "Docente", "Media & Communication"]}
                 />
                 <SpeakerCard
-                    name="Jerónimo Sánchez Varela "
+                    name="Jerónimo Sánchez Varela"
                     role={`
 			Padre, emprendedor y soñador.
 
@@ -266,6 +272,10 @@ return (
 			Juan Cosidó es un apasionado por las ideas que transforman y por las personas que las hacen realidad.
 
 			Consultor, docente de UCU y speaker, lleva más de 20 años trabajando en la intersección entre marketing, experiencia de cliente y estrategia comercial, ayudando a empresas y organizaciones a conectar con sus clientes de manera más humana, efectiva y sostenible.
+
+      En esta charla, se presentará por primera vez un nuevo framework diseñado en base a mi experiencia como consultor para diagnosticar integralmente el grado de madurez de una organización en los aspectos necesarios para caminar hacia una verdadera cultura centrada en el cliente. Esta herramienta permite identificar con precisión las condiciones necesarias para implantar con éxito una estrategia de experiencia de cliente.
+
+      Más que una fotografía, es un roadmap práctico de transformación, que pone a toda la organización en movimiento hacia un modelo más rentable, coherente y sostenible.
 			`}
                     image="/juancosido.jpg"
                     topics={["Marketing de Servicios", "Docente", "Customer Experience"]}
@@ -295,7 +305,6 @@ return (
                     <ScheduleItem
                         time="18:30 - 19:00"
                         title="Convocatoria de invitados"
-                        speaker="Ninguno"
                         location="Edificio San José"
                     />
                     <ScheduleItem
@@ -306,7 +315,7 @@ return (
                     />
                     <ScheduleItem
                         time="19:10 - 19:40"
-                        title="Charla: (tema...)"
+                        title="Charla: Tecnología e IA: Diseño de Experiencias Humanas"
                         speaker="Santiago Fernandez"
                         location="Edificio San José"
                     />
@@ -318,14 +327,13 @@ return (
                     />
                     <ScheduleItem
                         time="19:45 - 20:15"
-                        title="Charla: (tema...)"
+                        title="Charla: Revalorizando la Experiencia Humana con Nuevas Tecnologías"
                         speaker="Analía Arbuet"
                         location="Edificio San José"
                     />
                     <ScheduleItem
                         time="20:15 - 20:25"
                         title="Break"
-                        speaker="Ninguno"
                         location="Edificio San José"
                     />
                     <ScheduleItem
@@ -336,8 +344,8 @@ return (
                     />
                     <ScheduleItem
                         time="20:30 - 21:00"
-                        title="Charla: (tema...)"
-                        speaker="Momo"
+                        title="Charla: Hospitalidad y Naturaleza Humana"
+                        speaker="Jerónimo Sánchez Varela"
                         location="Edificio San José"
                     />
                     <ScheduleItem
@@ -348,7 +356,7 @@ return (
                     />
                     <ScheduleItem
                         time="21:05 - 21:35"
-                        title="Charla: (tema...)"
+                        title="Charla: Un Framework Innovador en la Experiencia del Cliente"
                         speaker="Juan Cosidó Gutierrez"
                         location="Edificio San José"
                     />
@@ -361,7 +369,6 @@ return (
                     <ScheduleItem
                         time="21:45"
                         title="After: Aperitivos y Música de Ambientación"
-                        speaker="Ninguno"
                         location="Edificio San José"
                     />
                   </div>

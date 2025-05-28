@@ -16,7 +16,7 @@ export default function RegistrationForm() {
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value)
   }
-  const hasUcuDiscount = email.endsWith("@correo.ucu.edu.uy") || email.endsWith("@ucu.edu.uy")
+  const hasUcuDiscount = email.endsWith("@correo.ucu.edu.uy")
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
