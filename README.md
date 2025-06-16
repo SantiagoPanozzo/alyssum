@@ -15,7 +15,7 @@ UCX is a project developed for the "Marketing de los Servicios y Experiencia del
 
 ## 🌐 Live Demo
 
-Visit our live deployment at [ucu-ucx.vercel.app](https://ucu-ucx.vercel.app/)
+Visit our live deployment at [ucx2025.vercel.app](https://ucu-ucx.vercel.app/)
 
 ## ✨ Features
 
