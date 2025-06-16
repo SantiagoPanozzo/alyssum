@@ -494,7 +494,7 @@ return (
             </div>
           </section>
 
-          {/* Sponsors Section 
+          {/* Sponsors Section  // should be changed to the new ones
           <section id="sponsors" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
