@@ -3,10 +3,10 @@
 import Image from 'next/image';
 
 const images = [
-  '/rodelu.png',
-  '/zenit.png',
-  '/estrellagalicia.png',
   '/emigrante.png',
+  '/rodelu.png',
+  '/estrellagalicia.png',
+  '/zenit.png',
 ];
 
 export default function HorizontalImageScroller() {
