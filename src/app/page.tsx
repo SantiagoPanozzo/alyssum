@@ -13,7 +13,7 @@ import { ScrollLink } from "./components/ui/scroll-link"
 
 export default function EventLandingPage() {
   // Event details
-  const eventDate = new Date("2025-07-10T18:30:00")
+  const eventDate = new Date("2025-07-09T18:30:00")
   const eventName = "UCX 2025"
   const eventTagline = "El marketing de servicios en tus manos."
   const eventDescription =
@@ -299,7 +299,7 @@ return (
                 <div>
                   <h3 className="text-2xl font-bold mb-6 flex items-center">
                     <Calendar className="mr-2 h-5 w-5 text-primary" />
-                    Jueves 9 de Julio:
+                    Miércoles 9 de Julio:
                   </h3>
                   <div className="space-y-4">
                     <ScheduleItem
@@ -495,6 +495,7 @@ return (
           </section>
 
           {/* Sponsors Section */} 
+
           <section id="sponsors" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
