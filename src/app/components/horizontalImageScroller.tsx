@@ -3,11 +3,10 @@
 import Image from 'next/image';
 
 const images = [
-  '/visa.svg',
-  '/amazon.svg',
-  '/microsoft.svg',
-  '/google.svg',
-  '/nike.svg',
+  '/rodelu.png',
+  '/zenit.png',
+  '/estrellagalicia.png',
+  '/emigrante.png',
 ];
 
 export default function HorizontalImageScroller() {
@@ -17,7 +16,7 @@ export default function HorizontalImageScroller() {
         {[...images, ...images].map((src, idx) => (
           <div
             key={idx}
-            className="relative h-32 w-auto aspect-video flex-shrink-0 flex items-center justify-center"
+            className="relative h-38 w-auto aspect-video flex-shrink-0 flex items-center justify-center"
           >
             {/* Main image */}
             <Image
@@ -26,6 +25,7 @@ export default function HorizontalImageScroller() {
               width={200}
               height={100}
               style={{ objectFit: 'contain' }}
+	      fill={false}
               priority
             />
           </div>
