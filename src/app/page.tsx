@@ -7,7 +7,7 @@ import SpeakerCard from "./components/speaker-card"
 import ScheduleItem from "./components/schedule-item"
 import FAQAccordion from "./components/faq-accordion"
 import RegistrationForm from "./components/registration-form"
-// import HorizontalImageScroller from "./components/horizontalImageScroller";
+import HorizontalImageScroller from "./components/horizontalImageScroller";
 import GoogleMapsButton from "./components/ui/google-maps-button"
 import { ScrollLink } from "./components/ui/scroll-link"
 
@@ -494,7 +494,7 @@ return (
             </div>
           </section>
 
-          {/* Sponsors Section 
+          {/* Sponsors Section */} 
           <section id="sponsors" className="py-16 md:py-24 bg-white relative z-20 w-screen flex flex-col items-center">
             <div className="container px-4 md:px-6">
               <div className="flex flex-col items-center text-center mb-12">
@@ -514,7 +514,7 @@ return (
 
             </div>
           </section>
-*/}
+
         </main>
 
         {/* Footer */}
