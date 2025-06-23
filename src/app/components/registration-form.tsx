@@ -62,10 +62,17 @@ export default function RegistrationForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-xl font-bold mb-2">¡Registro exitoso!</h3>
-        <p className="text-muted-foreground mb-4">
-          Gracias por inscribirte a UCX 2025. Te enviamos un mail para que puedas acceder a RedTickets y conseguir tu entrada.
-        </p>
+        <h3 className="text-xl font-bold mb-2">¡Revisa tu correo!</h3>
+	  {hasUcuDiscount && (
+	    <p className="text-muted-foreground mb-4">
+	      Te enviamos un mail con el link a RedTickets y tu código de descuento para que puedas canjear tu entrada. ¡No te olvides de canjearla!
+	    </p>
+	  )}
+	  {!hasUcuDiscount && (
+	    <p className="text-muted-foreground mb-4">
+	      Te enviamos un mail con el link a RedTickets para que puedas comprar tu entrada. ¡No te olvides de hacerlo!
+	    </p>
+	  )}
       </div>
     )
   }
