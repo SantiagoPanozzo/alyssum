@@ -314,60 +314,67 @@ return (
                         location="Edificio San José"
                     />
                     <ScheduleItem
-                        time="19:10 - 19:40"
-                        title="Charla: Tecnología e IA: Diseño de Experiencias Humanas"
-                        speaker="Santiago Fernandez"
+                        time="19:10 - 19:30"
+                        title="Charla: Marketing Orientado a Servicios"
+                        speaker="Marcel Burgos"
                         location="Edificio San José"
                     />
                     <ScheduleItem
-                        time="19:40 - 19:45"
+                        time="19:30 - 19:35"
                         title="Break y Presentación del Siguiente Speaker"
                         speaker="Ana Laura Aguiar y Leandro Barral"
                         location="Edificio San José"
                     />
                     <ScheduleItem
-                        time="19:45 - 20:15"
-                        title="Charla: Revalorizando la Experiencia Humana con Nuevas Tecnologías"
-                        speaker="Analía Arbuet"
-                        location="Edificio San José"
-                    />
-                    <ScheduleItem
-                        time="20:15 - 20:25"
-                        title="Break"
-                        location="Edificio San José"
-                    />
-                    <ScheduleItem
-                        time="20:25 - 20:30"
-                        title="Presentación del Siguiente Speaker"
-                        speaker="Ana Laura Aguiar y Leandro Barral"
-                        location="Edificio San José"
-                    />
-                    <ScheduleItem
-                        time="20:30 - 21:00"
-                        title="Charla: Hospitalidad y Naturaleza Humana"
-                        speaker="Jerónimo Sánchez Varela"
-                        location="Edificio San José"
-                    />
-                    <ScheduleItem
-                        time="21:00 - 21:05"
-                        title="Break y Presentación del Siguiente Speaker"
-                        speaker="Ana Laura Aguiar y Leandro Barral"
-                        location="Edificio San José"
-                    />
-                    <ScheduleItem
-                        time="21:05 - 21:35"
+                        time="19:35 - 19:55"
                         title="Charla: Un Framework Innovador en la Experiencia del Cliente"
                         speaker="Juan Cosidó Gutierrez"
                         location="Edificio San José"
                     />
                     <ScheduleItem
-                        time="21:35 - 21:45"
+                        time="19:55 - 20:00"
+                        title="Presentación del Siguiente Speaker"
+                        speaker="Ana Laura Aguiar y Leandro Barral"
+                        location="Edificio San José"
+                    />
+                    <ScheduleItem
+                        time="20:00 - 20:20"
+                        title="Charla: Hospitalidad y Naturaleza Humana"
+                        speaker="Jerónimo Sánchez Varela"
+                        location="Edificio San José"
+                    />
+                    <ScheduleItem
+                        time="20:20 - 20:25"
+                        title="Break y Presentación del Siguiente Speaker"
+                        speaker="Ana Laura Aguiar y Leandro Barral"
+                        location="Edificio San José"
+                    />
+                    <ScheduleItem
+                        time="20:25 - 20:45"
+                        title="Charla: Tecnología e IA: Diseño de Experiencias Humanas"
+                        speaker="Santiago Fernandez"
+                        location="Edificio San José"
+                    />
+                    <ScheduleItem
+                        time="20:45 - 20:50"
+                        title="Break y Presentación del Siguiente Speaker"
+                        speaker="Ana Laura Aguiar y Leandro Barral"
+                        location="Edificio San José"
+                    />
+                    <ScheduleItem
+                        time="20:50 - 21:10"
+                        title="Charla: Revalorizando la Experiencia Humana con Nuevas Tecnologías"
+                        speaker="Analía Arbuet"
+                        location="Edificio San José"
+                    />
+                    <ScheduleItem
+                        time="21:10 - 21:20"
                         title="Cierre"
                         speaker="Ana Laura Aguiar y Leandro Barral"
                         location="Edificio San José"
                     />
                     <ScheduleItem
-                        time="21:45"
+                        time="21:20"
                         title="After: Aperitivos y Música de Ambientación"
                         location="Edificio San José"
                     />
