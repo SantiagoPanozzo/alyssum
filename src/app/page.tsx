@@ -315,7 +315,7 @@ return (
                     />
                     <ScheduleItem
                         time="19:10 - 19:30"
-                        title="Charla: Marketing Orientado a Servicios"
+                        title="Charla: Emprendimiento y Experiencia del Cliente"
                         speaker="Marcel Burgos"
                         location="Edificio San José"
                     />
@@ -441,9 +441,9 @@ return (
 
                   <div className="space-y-6">
                     <div className="bg-muted/50 p-6 rounded-lg border border-slate-500 duration-300 transition ease-in-out hover:scale-102">
-                      <h3 className="text-xl font-bold mb-2">Entrada Anticipada</h3>
                       <p className="text-3xl font-bold text-primary mb-2">$100</p>
-                      <p className="text-muted-foreground mb-4">Disponibles hasta el 30 de Junio.</p>
+                      <h3 className="text-xl font-bold mb-2">Entrada Regular</h3>
+                      <p className="text-muted-foreground mb-4">ÚLTIMAS DISPONIBLES</p>
                       <ul className="space-y-2 mb-6">
                         <li className="flex items-center">
                           <svg
