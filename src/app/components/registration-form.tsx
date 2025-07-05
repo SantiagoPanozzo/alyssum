@@ -96,6 +96,7 @@ export default function RegistrationForm() {
 	  value={email}
 	  onChange={handleEmailChange}
 	/>
+	<p className="text-neutral-600 text-sm">* ¡Si sos alumno de la UCU usá tu correo institucional! </p>
 	{hasUcuDiscount && (
 	  <div className="mt-2 p-4 rounded-md border bg-green-100 text-green-800 border-green-300 animate-fade-in">
 	    🎉 Se te aplicará el <strong>descuento del 100%</strong>
@@ -108,7 +109,7 @@ export default function RegistrationForm() {
         <RadioGroup defaultValue="early-bird">
           <div className="flex items-center space-x-2 transition duration-150 ease-in-out hover:text-sky-700">
             <RadioGroupItem value="vip" id="vip" />
-            <Label htmlFor="vip">Entrada Anticipada ($100)</Label>
+            <Label htmlFor="vip">Entrada Normal ($100)</Label>
           </div>
         </RadioGroup>
       </div>

@@ -58,7 +58,7 @@ return (
             </ScrollLink>
           </nav>
           <Button size="sm" variant="outline" asChild className="hover:text-sky-600 transition duration-300 ease-in-out border-slate-600 hover:scale-110 hover:border-sky-600 hover:cursor-pointer hover:bg-sky-700 hover:text-white">
-            <ScrollLink href="#register">
+            <ScrollLink href="#registration-form-heading">
               <p >
                 Inscribite Ya
               </p>
@@ -93,7 +93,7 @@ return (
 		<p className="text-xl text-muted-foreground max-w-[600px]">{eventDescription}</p>
 		<div className="flex flex-col sm:flex-row gap-3 mt-2">
 		  <Button size="lg" asChild className="transition duration-500 ease-in-out hover:cursor-pointer hover:bg-sky-700 hover:text-white hover:shadow-lg hover:scale-105 hover:shadow-sky-200 border border-slate-800 hover:border-sky-600">
-		    <ScrollLink href="#register">
+		    <ScrollLink href="#registration-form-heading">
 		      <p>Inscribite Ya</p>
 		      <ArrowRight className="ml-2 h-4 w-4" />
 		    </ScrollLink>
@@ -469,7 +469,7 @@ return (
                   </div>
                 </div>
 
-                <div className="bg-background p-8 rounded-lg border border-slate-500">
+                <div id="registration-form-heading" className="bg-background p-8 rounded-lg border border-slate-500">
                   <h3 className="text-2xl font-bold mb-6">Formulario de Registro</h3>
                   <RegistrationForm />
                 </div>
@@ -576,7 +576,7 @@ return (
                     </ScrollLink>
                   </li>
                   <li>
-                    <ScrollLink href="#register" className="text-sm border-slate-300 font-medium transition duration-300 hover:text-primary hover:cursor-pointer hover:bg-sky-600 hover:text-white ">
+                    <ScrollLink href="#registration-form-heading" className="text-sm border-slate-300 font-medium transition duration-300 hover:text-primary hover:cursor-pointer hover:bg-sky-600 hover:text-white ">
                       <p className="hover:text-sky-600 transition ">
                         Inscribite Ya 
                       </p>
@@ -607,14 +607,10 @@ return (
 		  </li>
                   <li className="flex items-start gap-3">
 		    <Link href="tel:+59898287145" className="flex items-start gap-3 transition hover:text-sky-600 hover:underline">
-		      <svg className="h-5 w-5 text-primary mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-			<path
-			    strokeLinecap="round"
-			    strokeLinejoin="round"
-			    strokeWidth={2}
-			    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-			/>
+		      <svg className="h-5 w-5 text-primary mt-1" viewBox="0 0 32 32" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16.002 3.001c-7.18 0-13 5.82-13 13 0 2.297.608 4.544 1.763 6.52l-1.89 6.903 7.082-1.858a12.975 12.975 0 0 0 6.045 1.532h.002c7.18 0 13-5.82 13-13s-5.82-13-13-13zm0 23.78a10.92 10.92 0 0 1-5.572-1.53l-.4-.24-4.203 1.102 1.122-4.096-.26-.42a10.916 10.916 0 0 1-1.672-5.866c0-6.045 4.923-10.969 10.97-10.969 2.934 0 5.692 1.144 7.765 3.216a10.918 10.918 0 0 1-7.75 18.803zm6.014-8.222c-.327-.164-1.934-.955-2.234-1.064-.3-.11-.52-.164-.74.164-.22.327-.85 1.064-1.044 1.283-.19.22-.38.246-.707.082-.327-.164-1.38-.51-2.63-1.627-.972-.867-1.628-1.937-1.82-2.263-.19-.327-.02-.504.145-.668.15-.148.327-.383.49-.573.164-.19.218-.327.327-.546.11-.218.055-.41-.027-.573-.082-.164-.74-1.783-1.015-2.438-.27-.648-.545-.56-.74-.57l-.63-.01c-.218 0-.573.082-.873.383s-1.146 1.118-1.146 2.73c0 1.61 1.173 3.165 1.336 3.384.164.218 2.31 3.53 5.6 4.95.782.337 1.39.537 1.863.688.782.25 1.494.215 2.058.13.628-.093 1.934-.79 2.21-1.552.273-.764.273-1.418.19-1.552-.082-.137-.3-.218-.627-.383z"/>
 		      </svg>
+
 		      <span className="text-muted-foreground">098 287 145</span>
 		    </Link>
                   </li>

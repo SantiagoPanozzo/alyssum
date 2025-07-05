@@ -13,15 +13,18 @@ export const ScrollLink = forwardRef<HTMLAnchorElement, ScrollLinkProps>(
   function ScrollLink({ href, children, ...props }, ref) { 
     const router = useRouter()
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-      e.preventDefault()
-      const id = href.replace('#', '')
-      const target = document.getElementById(id)
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' })
-      } else {
-        router.push(href)
-      }
+	  e.preventDefault()
+	  const id = href.replace('#', '')
+	  const target = document.getElementById(id)
+	  if (target) {
+	    const yOffset = -80 // Change this to match your navbar height
+	    const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset
+	    window.scrollTo({ top: y, behavior: 'smooth' })
+	  } else {
+	    router.push(href)
+	  }
     }
+
 
     return (
       <a
