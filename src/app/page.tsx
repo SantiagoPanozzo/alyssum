@@ -13,7 +13,7 @@ import { ScrollLink } from "./components/ui/scroll-link"
 
 export default function EventLandingPage() {
   // Event details
-  const eventDate = new Date("2025-07-09T18:30:00")
+  const eventDate = new Date("2025-07-09T18:30:00-03:00")
   const eventName = "UCX 2025"
   const eventTagline = "El marketing de servicios en tus manos."
   const eventDescription =
